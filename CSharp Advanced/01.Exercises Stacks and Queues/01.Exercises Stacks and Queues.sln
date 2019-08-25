@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 4.  Fast Food", "Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Calculate Sequence with Queue", "Problem 5. Calculate Sequence with Queue\Problem 5. Calculate Sequence with Queue.csproj", "{9F713708-078D-4E3B-9A41-1B304E9BA240}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Fashion Boutique", "Problem 5. Fashion Boutique\Problem 5. Fashion Boutique.csproj", "{2A6DF014-43C5-4998-B30D-679E30F98B1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9F713708-078D-4E3B-9A41-1B304E9BA240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F713708-078D-4E3B-9A41-1B304E9BA240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F713708-078D-4E3B-9A41-1B304E9BA240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6DF014-43C5-4998-B30D-679E30F98B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6DF014-43C5-4998-B30D-679E30F98B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6DF014-43C5-4998-B30D-679E30F98B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6DF014-43C5-4998-B30D-679E30F98B1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
