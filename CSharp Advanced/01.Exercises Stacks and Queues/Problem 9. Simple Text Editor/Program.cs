@@ -27,10 +27,16 @@ namespace Problem_9._Simple_Text_Editor
                         undoStack.Push("1 " + substract);
                         break;
                     case "3":
-                        Console.WriteLine(sb[int.Parse(commands[1])]);
+                        Console.WriteLine(sb[int.Parse(commands[1])-1]);
                         break;
                     case "4":
-                        // undo
+                        string [] undo = undoStack.Pop().Split();
+                        if (undo[0] == "1") sb.Append(undo[1]);
+                        else if (undo[0] == "2")
+                        {
+                            int subL = int.Parse(undo[1]);
+                            sb.Remove(sb.Length - subL, subL);
+                        }
                         break;
                 }
             }
