@@ -21,6 +21,7 @@ namespace Problem_9._Simple_Text_Editor
                     case "2":
                         break;
                     case "3":
+                        Console.WriteLine(sb[int.Parse(commands[1])]);
                         break;
                     case "4":
                         break;
