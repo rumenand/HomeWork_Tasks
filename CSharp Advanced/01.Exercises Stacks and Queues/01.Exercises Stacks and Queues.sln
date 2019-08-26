@@ -11,15 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 3. Maximum and Mini
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 4.  Fast Food", "Problem 4.  Fast Food\Problem 4.  Fast Food.csproj", "{28144739-7600-48CA-A0EF-5D4FCFA4DBC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Calculate Sequence with Queue", "Problem 5. Calculate Sequence with Queue\Problem 5. Calculate Sequence with Queue.csproj", "{9F713708-078D-4E3B-9A41-1B304E9BA240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 5. Calculate Sequence with Queue", "Problem 5. Calculate Sequence with Queue\Problem 5. Calculate Sequence with Queue.csproj", "{9F713708-078D-4E3B-9A41-1B304E9BA240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Fashion Boutique", "Problem 5. Fashion Boutique\Problem 5. Fashion Boutique.csproj", "{2A6DF014-43C5-4998-B30D-679E30F98B1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 5. Fashion Boutique", "Problem 5. Fashion Boutique\Problem 5. Fashion Boutique.csproj", "{2A6DF014-43C5-4998-B30D-679E30F98B1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 6. Auto Repair and Service", "Problem 6. Auto Repair and Service\Problem 6. Auto Repair and Service.csproj", "{2B5603C5-BD3A-4859-807B-43E1BCE821C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 6. Auto Repair and Service", "Problem 6. Auto Repair and Service\Problem 6. Auto Repair and Service.csproj", "{2B5603C5-BD3A-4859-807B-43E1BCE821C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 7. Truck Tour", "Problem 7. Truck Tour\Problem 7. Truck Tour.csproj", "{A16FFBB9-21D6-47B5-A678-F7520AA7F364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 7. Truck Tour", "Problem 7. Truck Tour\Problem 7. Truck Tour.csproj", "{A16FFBB9-21D6-47B5-A678-F7520AA7F364}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 8. Balanced Parentheses", "Problem 8. Balanced Parentheses\Problem 8. Balanced Parentheses.csproj", "{25E35235-5EF0-400B-B343-F4BECDABE686}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 8. Balanced Parentheses", "Problem 8. Balanced Parentheses\Problem 8. Balanced Parentheses.csproj", "{25E35235-5EF0-400B-B343-F4BECDABE686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 9. Simple Text Editor", "Problem 9. Simple Text Editor\Problem 9. Simple Text Editor.csproj", "{755AC567-45C1-4B95-A0FD-367C46B3590D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{25E35235-5EF0-400B-B343-F4BECDABE686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25E35235-5EF0-400B-B343-F4BECDABE686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25E35235-5EF0-400B-B343-F4BECDABE686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755AC567-45C1-4B95-A0FD-367C46B3590D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755AC567-45C1-4B95-A0FD-367C46B3590D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755AC567-45C1-4B95-A0FD-367C46B3590D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755AC567-45C1-4B95-A0FD-367C46B3590D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
