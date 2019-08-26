@@ -20,8 +20,11 @@ namespace Problem_9._Simple_Text_Editor
                         sb.Append(commands[1]);
                         undoStack.Push("2 " + commands[1].Length);
                         break;
-                    case "2":                        
-                        //sb.remove
+                    case "2":
+                        int subLength = int.Parse(commands[1]);
+                        string substract = sb.ToString().Substring(sb.Length - subLength);
+                        sb.Remove(sb.Length - subLength, subLength);
+                        undoStack.Push("1 " + substract);
                         break;
                     case "3":
                         Console.WriteLine(sb[int.Parse(commands[1])]);
