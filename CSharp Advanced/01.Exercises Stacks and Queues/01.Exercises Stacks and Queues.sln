@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 7. Truck Tour", "Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 8. Balanced Parentheses", "Problem 8. Balanced Parentheses\Problem 8. Balanced Parentheses.csproj", "{25E35235-5EF0-400B-B343-F4BECDABE686}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 9. Simple Text Editor", "Problem 9. Simple Text Editor\Problem 9. Simple Text Editor.csproj", "{755AC567-45C1-4B95-A0FD-367C46B3590D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 9. Simple Text Editor", "Problem 9. Simple Text Editor\Problem 9. Simple Text Editor.csproj", "{755AC567-45C1-4B95-A0FD-367C46B3590D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 10. Crossroads", "Problem 10. Crossroads\Problem 10. Crossroads.csproj", "{2CD43B53-FD64-424C-8DD1-B0953C742141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 10. Crossroads", "Problem 10. Crossroads\Problem 10. Crossroads.csproj", "{2CD43B53-FD64-424C-8DD1-B0953C742141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 11. Key Revolver", "Problem 11. Key Revolver\Problem 11. Key Revolver.csproj", "{A9D3D85F-CFDE-43CD-8321-59E8DFE44EDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{2CD43B53-FD64-424C-8DD1-B0953C742141}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CD43B53-FD64-424C-8DD1-B0953C742141}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CD43B53-FD64-424C-8DD1-B0953C742141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9D3D85F-CFDE-43CD-8321-59E8DFE44EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D3D85F-CFDE-43CD-8321-59E8DFE44EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D3D85F-CFDE-43CD-8321-59E8DFE44EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D3D85F-CFDE-43CD-8321-59E8DFE44EDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
