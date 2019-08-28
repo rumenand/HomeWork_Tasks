@@ -17,7 +17,7 @@ namespace Problem_11._Key_Revolver
             int shot = 0;
             while (bullets.Count>0 && locks.Count >0)
             {
-                int currentBullet= bullets.Pop();                
+                int currentBullet= bullets.Pop();               
                 int currentLock = locks.Peek();
                 if (currentBullet<=currentLock)
                 {
@@ -26,7 +26,7 @@ namespace Problem_11._Key_Revolver
                 }
                 else Console.WriteLine("Ping!");
                 shot++;
-                if (shot==barrelSize)
+                if (shot == barrelSize && bullets.Count>0)
                 {
                     Console.WriteLine("Reloading!");
                     shot = 0;
