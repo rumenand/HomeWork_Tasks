@@ -16,6 +16,21 @@ namespace _4._Symbol_in_Matrix
                     matrix[i, j] = row[j];
                 }
             }
+            char forSearch = (char)Console.Read();
+            bool found = false;
+            for (int x = 0; x < matrix.GetLength(0); x += 1)
+            {
+                for (int y = 0; y < matrix.GetLength(1); y += 1)
+                {
+                    if ( forSearch == matrix[x, y])
+                    {
+                        found = true;
+                        Console.WriteLine($"({x}, {y})");
+                        break;
+                    }
+                }
+            }
+            if (!found) Console.WriteLine($"{forSearch} does not occur in the matrix");
         }
     }
 }
