@@ -27,8 +27,9 @@ namespace _4._Symbol_in_Matrix
                         found = true;
                         Console.WriteLine($"({x}, {y})");
                         break;
-                    }
+                    }                   
                 }
+                if (found) break;
             }
             if (!found) Console.WriteLine($"{forSearch} does not occur in the matrix");
         }
