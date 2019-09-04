@@ -36,6 +36,6 @@ namespace _5._Square_with_Maximum_Sum
             Console.WriteLine($"{matrix[index[0],index[1]]} {matrix[index[0], index[1]+1]}");
             Console.WriteLine($"{matrix[index[0]+1, index[1]]} {matrix[index[0]+1, index[1] + 1]}");
             Console.WriteLine(maxSum2x2Mat);
-        }
+        }      
     }
 }
