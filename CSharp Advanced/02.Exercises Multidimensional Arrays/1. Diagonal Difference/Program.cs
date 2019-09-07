@@ -15,6 +15,14 @@ namespace _1._Diagonal_Difference
                 matrix[i] = new int[input.Count()];
                 matrix[i] = input.ToArray();                
             }
+            int primaryDiag = 0;
+            int secondaryDiag = 0;
+            for (int i=0; i<matrixSize; i++)
+            {
+                primaryDiag += matrix[i][i];
+                secondaryDiag += matrix[i][matrixSize-1-i];
+            }
+            
         }
     }
 }
