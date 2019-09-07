@@ -12,7 +12,8 @@ namespace _1._Diagonal_Difference
             for (int i=0;i<matrixSize;i++)
             {
                 var input = Console.ReadLine().Split().Select(int.Parse);
-                matrix[i] = input.ToArray();
+                matrix[i] = new int[input.Count()];
+                matrix[i] = input.ToArray();                
             }
         }
     }
