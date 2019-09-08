@@ -22,7 +22,7 @@ namespace _1._Diagonal_Difference
                 primaryDiag += matrix[i][i];
                 secondaryDiag += matrix[i][matrixSize-1-i];
             }
-            
+            Console.WriteLine(Math.Abs(primaryDiag - secondaryDiag));
         }
     }
 }
