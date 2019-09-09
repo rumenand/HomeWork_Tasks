@@ -7,26 +7,38 @@ namespace _3._Maximal_Sum
     {
         static void Main ()
         {
-            int[] matrixSize = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            if (matrixSize[0] >= 3 && matrixSize[1] >= 3)
-            {
+            int[] matrixSize = Console.ReadLine().Split().Select(int.Parse).ToArray();            
                 int[,] matrix = new int[matrixSize[0], matrixSize[1]];
+            bool converted = true;
                 for (int i = 0; i < matrixSize[0]; i++)
                 {
-                    int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
-                    for (int j = 0; j < matrixSize[1]; j++)
+                    var input = Console.ReadLine().Split().ToArray();
+                
+                for (int j = 0; j < matrixSize[1]; j++)
                     {
-                        matrix[i, j] = input[j];
+                    int number;
+                    bool success = int.TryParse(input[j], out number);
+                    if (success)
+                    {
+                        matrix[i, j] = number;
+                    }
+                    else
+                    {
+                        converted = false;
+                        break;
+                    }
                     }
                 }
+            if (converted)
+            {
                 int maxSum = 0;
                 int maxX = 0;
                 int maxY = 0;
-                for (int i=0; i<matrixSize[0]-2; i++)
+                for (int i = 0; i < matrixSize[0] - 2; i++)
                 {
-                    for (int j=0;j<matrixSize[1]-2;j++)
+                    for (int j = 0; j < matrixSize[1] - 2; j++)
                     {
-                        int currentSum = Get3x3Sum(matrix, i,j);
+                        int currentSum = Get3x3Sum(matrix, i, j);
                         if (currentSum > maxSum)
                         {
                             maxSum = currentSum;
@@ -36,9 +48,9 @@ namespace _3._Maximal_Sum
                     }
                 }
                 Console.WriteLine($"Sum = {maxSum}");
-                for (int i=maxX; i<maxX+3; i++)
+                for (int i = maxX; i < maxX + 3; i++)
                 {
-                    for (int j=maxY; j<maxY+3; j++)
+                    for (int j = maxY; j < maxY + 3; j++)
                     {
                         Console.Write($"{matrix[i, j]} ");
                     }
