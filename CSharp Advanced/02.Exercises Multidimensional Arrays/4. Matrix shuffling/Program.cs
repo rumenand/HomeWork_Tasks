@@ -8,7 +8,7 @@ namespace _4._Matrix_shuffling
         static void Main()
         {
             int[] matrixSize = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            string[,] matrix = new string[matrixSize[0], matrixSize[1]];        
+            string[,] matrix = new string[matrixSize[0], matrixSize[1]];            
             for (int i = 0; i < matrixSize[0]; i++)
             {
                 var input = Console.ReadLine().Split().ToArray();
@@ -17,7 +17,50 @@ namespace _4._Matrix_shuffling
                      matrix[i, j] = input[j];                   
                 }
             }
-           
+            string command;
+           while ((command = Console.ReadLine()) != "END")
+            {
+                string [] commands = command.Split();
+                if (checkForValid(commands) && checkInMatrix(commands,matrixSize))
+                {
+                    swapMatrix(commands, matrix);
+                    printMatrix(matrix);
+                }
+                else Console.WriteLine("Invalid input!");
             }
+        }
+
+        static bool checkForValid(string [] input)
+        {
+            bool result = true;
+            if (input[0] == "swap" && input.Length == 5)
+            {
+                for (int i=1; i<5;i++)
+                {
+                    int number;
+                    result = int.TryParse(input[i], out number);
+                }
+            }
+            else result = false;
+            return result;
+        }
+
+        static bool checkInMatrix(string[] input, int [] matrix)
+        {
+            if (int.Parse(input[1]) < matrix[0] && int.Parse(input[3]) < matrix[0]
+                && int.Parse(input[2]) < matrix[1] && int.Parse(input[4]) < matrix[1])
+                return true;
+            return false;
+        }
+
+        static void swapMatrix(string [] commands, string[,] matrix)
+        {
+
+        }
+
+        static void printMatrix(string [,] matrix)
+        {
+
+        }
     }
 }
