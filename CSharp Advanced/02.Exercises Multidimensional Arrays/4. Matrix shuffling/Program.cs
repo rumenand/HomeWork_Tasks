@@ -55,12 +55,25 @@ namespace _4._Matrix_shuffling
 
         static void swapMatrix(string [] commands, string[,] matrix)
         {
-
+            int row1 = int.Parse(commands[1]);
+            int row2 = int.Parse(commands[3]);
+            int col1 = int.Parse(commands[2]);
+            int col2 = int.Parse(commands[4]);
+            var temp = matrix[row1, col1];
+            matrix[row1, col1] = matrix[row2, col2];
+            matrix[row2, col2] = temp;
         }
 
         static void printMatrix(string [,] matrix)
         {
-
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    Console.Write("{0} ", matrix[row, col]);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
