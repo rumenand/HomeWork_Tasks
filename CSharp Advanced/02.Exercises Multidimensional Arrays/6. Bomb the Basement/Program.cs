@@ -11,7 +11,7 @@ namespace _6._Bomb_the_Basement
             int[,] matrix = new int[matrixSize[0], matrixSize[1]];
             int[] bombParam = Console.ReadLine().Split().Select(int.Parse).ToArray();
             BoomAction(matrix, bombParam);
-           // GravityFall(matrix);
+            GravityFall(matrix);
             PrintMatrix(matrix);
         }
 
@@ -23,6 +23,33 @@ namespace _6._Bomb_the_Basement
                 {
                     double distamceToBomb = Math.Sqrt(Math.Pow((bomb[0] - i), 2) + Math.Pow((bomb[1] - j), 2));
                     if (distamceToBomb <= bomb[2]) matrix[i, j] = 1;
+                }
+            }
+        }
+
+        static void GravityFall(int[,] matrix)
+        {
+            int rows = matrix.GetLength(0);
+            int columns = matrix.GetLength(1);
+            if (rows < 2) return;
+            else
+            {
+                bool moved = true;
+                while (moved)
+                {
+                    moved = false;
+                    for (int i = 1; i < rows; i++)
+                    {
+                        for (int j = 0; j < columns; j++)
+                        {
+                            if (matrix[i, j] == 1 && matrix[i - 1, j] == 0)
+                            {
+                                matrix[i, j] = 0;
+                                matrix[i - 1, j] = 1;
+                                moved = true;
+                            }
+                        }
+                    }
                 }
             }
         }
