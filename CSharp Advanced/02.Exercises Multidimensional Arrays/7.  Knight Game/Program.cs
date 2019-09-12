@@ -31,7 +31,7 @@ namespace _7.__Knight_Game
                         if (board[i, j] == 'K')
                         {
                             int hits = CheckForHits(board, i, j);
-                            if (hits < maxHits)
+                            if (hits > maxHits)
                             {
                                 maxHits = hits;
                                 maxX = i;
@@ -55,6 +55,7 @@ namespace _7.__Knight_Game
             int hits = CheckCoord(board, Xpos-2, Ypos-1);
             hits += CheckCoord(board, Xpos - 2, Ypos + 1);
             hits += CheckCoord(board, Xpos + 2, Ypos - 1);
+
             hits += CheckCoord(board, Xpos + 2, Ypos + 1);
             hits += CheckCoord(board, Xpos - 1, Ypos + 2);
             hits += CheckCoord(board, Xpos + 1, Ypos + 2);
@@ -65,7 +66,7 @@ namespace _7.__Knight_Game
 
         static int CheckCoord(char[,] board, int Xpos, int Ypos)
         {
-            if (Xpos > 0 && Xpos < board.GetLength(0) && Ypos > 0 && Ypos < board.GetLength(1) && board[Xpos, Ypos] == 'K') return 1;
+            if (Xpos >= 0 && Xpos < board.GetLength(0) && Ypos >= 0 && Ypos < board.GetLength(1) && board[Xpos, Ypos] == 'K') return 1;
             else return 0;
         }
     }
