@@ -32,11 +32,11 @@ namespace _8._Bombs
           int bombPower = matrix[xPos, yPos];
             if (bombPower > 0)
             {
-                for (int i = Math.Max(0, xPos - 1); i <= Math.Min(matrix.GetLength(0), xPos + 1); i++)
+                for (int i = Math.Max(0, xPos - 1); i < Math.Min(matrix.GetLength(0), xPos + 2); i++)
                 {
-                    for (int j = Math.Max(0, yPos - 1); j <= Math.Min(matrix.GetLength(0), yPos + 1); j++)
+                    for (int j = Math.Max(0, yPos - 1); j < Math.Min(matrix.GetLength(1), yPos + 2); j++)
                     {
-                        matrix[i, j] -= bombPower;
+                        if(matrix[i,j]>0) matrix[i, j] -= bombPower;
                     }
                 }
             }            
