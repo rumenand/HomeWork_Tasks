@@ -79,10 +79,10 @@ namespace _10._Radioactive_Mutant_V._Bunnies
                 {
                     if (matrix[i, j] == 'B')
                     {
-                        if (!CheckForEscaping(j - 1, i, matrix)) matrix[i, j - 1] = 'N';
-                        if (!CheckForEscaping(j + 1, i, matrix)) matrix[i, j + 1] = 'N';
-                        if (!CheckForEscaping(j, i + 1, matrix)) matrix[i + 1, j] = 'N';
-                        if (!CheckForEscaping(j, i - 1, matrix)) matrix[i - 1, j] = 'N';
+                        if (!CheckForEscaping(j - 1, i, matrix) && matrix[i,j-1] == '.') matrix[i, j - 1] = 'N';
+                        if (!CheckForEscaping(j + 1, i, matrix) && matrix[i, j + 1] == '.') matrix[i, j + 1] = 'N';
+                        if (!CheckForEscaping(j, i + 1, matrix) && matrix[i+1, j] == '.') matrix[i + 1, j] = 'N';
+                        if (!CheckForEscaping(j, i - 1, matrix) && matrix[i-1, j] == '.') matrix[i - 1, j] = 'N';
                     }
                 }
             }
