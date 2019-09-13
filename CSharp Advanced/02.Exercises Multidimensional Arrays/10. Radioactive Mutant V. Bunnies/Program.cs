@@ -65,6 +65,7 @@ namespace _10._Radioactive_Mutant_V._Bunnies
             if (dead) Console.WriteLine($"dead: {currentYpos} {currentXpos}");
             else Console.WriteLine($"won: {currentYpos} {currentXpos}");            
         }
+
         static bool CheckForEscaping(int Xpos, int Ypos, char [,] matrix)
         {
             if (Xpos < 0 || Xpos >= matrix.GetLength(1) || Ypos < 0 || Ypos >= matrix.GetLength(0)) return true;
