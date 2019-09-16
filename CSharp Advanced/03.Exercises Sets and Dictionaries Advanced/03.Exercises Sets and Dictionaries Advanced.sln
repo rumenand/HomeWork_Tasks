@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 5. Count Symbols", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 6. Wardrobe", "Problem 6. Wardrobe\Problem 6. Wardrobe.csproj", "{6992E791-9F58-4DB2-9462-C6B0CD870777}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 7. The V-Logger", "Problem 7. The V-Logger\Problem 7. The V-Logger.csproj", "{B0F82910-8DB3-46C3-923B-DCCC119DAD9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{6992E791-9F58-4DB2-9462-C6B0CD870777}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6992E791-9F58-4DB2-9462-C6B0CD870777}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6992E791-9F58-4DB2-9462-C6B0CD870777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F82910-8DB3-46C3-923B-DCCC119DAD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F82910-8DB3-46C3-923B-DCCC119DAD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F82910-8DB3-46C3-923B-DCCC119DAD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F82910-8DB3-46C3-923B-DCCC119DAD9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
