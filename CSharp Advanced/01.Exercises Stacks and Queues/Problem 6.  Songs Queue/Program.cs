@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _2._Sum_Numbers
+namespace Problem_6.__Songs_Queue
 {
     class Program
     {
