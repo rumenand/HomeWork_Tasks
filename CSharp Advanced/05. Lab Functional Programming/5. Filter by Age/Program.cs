@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 
 namespace _5._Filter_by_Age
@@ -19,8 +18,8 @@ namespace _5._Filter_by_Age
             int age = int.Parse(Console.ReadLine());
             string format = Console.ReadLine();
             Func<int, bool> tester = CreateTester(condition, age);
-            Action<KeyValuePair<string, int>> printer =
-            CreatePrinter(format);
+            Action<KeyValuePair<string, int>> printer = CreatePrinter(format);
+
             PrintFilteredStudent(people, tester, printer);
         }
 
