@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Problem_2._Knights_of_Honor
 {
@@ -6,10 +8,9 @@ namespace Problem_2._Knights_of_Honor
     {
         static void Main()
         {
-            Action<string> printSir = name => Console.WriteLine($"Sir {name}");
+            Action<IEnumerable<string>> printSir = collection => Console.WriteLine(string.Join(Environment.NewLine, collection.Select(name => $"Sir {name}")));
             string[] input = Console.ReadLine().Split();
-            foreach (var name in input)
-                printSir(name);
+            printSir(input);
         }
     }
 }
