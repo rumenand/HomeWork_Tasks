@@ -14,11 +14,23 @@ namespace _5._Snake_Moves
             int maxIndex = snake.Length;
            for (int i=0; i<matrixSize[0]; i++)
             {
-                for (int j=0; j<matrixSize[1]; j++)
+                if (i % 2 == 0)
                 {
-                    matrix[i, j] = snake[index];
-                    index++;
-                    if (index == maxIndex) index = 0;
+                    for (int j = 0; j < matrixSize[1]; j++)
+                    {
+                        matrix[i, j] = snake[index];
+                        index++;
+                        if (index == maxIndex) index = 0;
+                    }
+                }
+                else
+                {
+                    for (int j = matrixSize[1]-1; j >= 0; j--)
+                    {
+                        matrix[i, j] = snake[index];
+                        index++;
+                        if (index == maxIndex) index = 0;
+                    }
                 }
             }
 

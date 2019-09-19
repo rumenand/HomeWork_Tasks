@@ -7,8 +7,8 @@ namespace Problem_3._Custom_Min_Function
     {
         static void Main()
         {
-            var numbers = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-            Func<string [], int> GetMin = CalcMinNumber;
+            var numbers = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            Func<int [], int> GetMin = col => col.Min();
             Console.WriteLine(GetMin(numbers));
         }
 
