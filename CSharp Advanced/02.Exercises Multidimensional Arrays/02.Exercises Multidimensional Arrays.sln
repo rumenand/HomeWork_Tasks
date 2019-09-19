@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7.  Knight Game", "7.  Knig
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8. Bombs", "8. Bombs\8. Bombs.csproj", "{644AB295-8088-48A1-B96B-C089A8DC9E52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. Miner", "9. Miner\9. Miner.csproj", "{64FAA290-B29E-4D83-9988-779398D48C7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9. Miner", "9. Miner\9. Miner.csproj", "{64FAA290-B29E-4D83-9988-779398D48C7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Radioactive Mutant V. Bunnies", "10. Radioactive Mutant V. Bunnies\10. Radioactive Mutant V. Bunnies.csproj", "{4179731F-02AB-488D-A571-643D3BBBD4DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10. Radioactive Mutant V. Bunnies", "10. Radioactive Mutant V. Bunnies\10. Radioactive Mutant V. Bunnies.csproj", "{4179731F-02AB-488D-A571-643D3BBBD4DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Jagged Array Manipulator", "6. Jagged Array Manipulator\6. Jagged Array Manipulator.csproj", "{8BF5EED3-FAC8-4D29-B98C-8E9BE7AE18D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{4179731F-02AB-488D-A571-643D3BBBD4DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4179731F-02AB-488D-A571-643D3BBBD4DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4179731F-02AB-488D-A571-643D3BBBD4DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BF5EED3-FAC8-4D29-B98C-8E9BE7AE18D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF5EED3-FAC8-4D29-B98C-8E9BE7AE18D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF5EED3-FAC8-4D29-B98C-8E9BE7AE18D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF5EED3-FAC8-4D29-B98C-8E9BE7AE18D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
