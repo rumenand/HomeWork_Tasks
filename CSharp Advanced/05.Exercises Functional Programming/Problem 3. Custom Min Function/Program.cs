@@ -7,14 +7,20 @@ namespace Problem_3._Custom_Min_Function
     {
         static void Main()
         {
-            var numbers = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-            Func<int [], int> GetMin = col => col.Min();
+            var numbers = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+            Func<string [], int> GetMin = CalcMinNumber;
             Console.WriteLine(GetMin(numbers));
         }
 
         static int CalcMinNumber(string[] numbers)
         {
-            return 0;
+            int minValue = int.MaxValue;
+            foreach(var num in  numbers)
+            {
+                int current = int.Parse(num);
+                if (minValue > current) minValue = current;
+            }
+            return minValue;
         }
     }
 }
