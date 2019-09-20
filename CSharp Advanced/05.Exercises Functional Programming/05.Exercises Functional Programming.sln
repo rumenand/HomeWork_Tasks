@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 2. Knights of Honor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 3. Custom Min Function", "Problem 3. Custom Min Function\Problem 3. Custom Min Function.csproj", "{D913D081-57D1-4624-BA7B-D65B6581E587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 4. Find Evens or Odds", "Problem 4. Find Evens or Odds\Problem 4. Find Evens or Odds.csproj", "{6AB2C9E4-50E4-49AE-B2BB-70AA24679560}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 4. Find Evens or Odds", "Problem 4. Find Evens or Odds\Problem 4. Find Evens or Odds.csproj", "{6AB2C9E4-50E4-49AE-B2BB-70AA24679560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Applied Arithmetics", "Problem 5. Applied Arithmetics\Problem 5. Applied Arithmetics.csproj", "{8E241AF5-4175-4CE8-BCA4-C6ABED332D7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 5. Applied Arithmetics", "Problem 5. Applied Arithmetics\Problem 5. Applied Arithmetics.csproj", "{8E241AF5-4175-4CE8-BCA4-C6ABED332D7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 6. Reverse and Exclude", "Problem 6. Reverse and Exclude\Problem 6. Reverse and Exclude.csproj", "{5D13B17F-592B-4521-AA9E-E2D0E6368364}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8E241AF5-4175-4CE8-BCA4-C6ABED332D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E241AF5-4175-4CE8-BCA4-C6ABED332D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E241AF5-4175-4CE8-BCA4-C6ABED332D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D13B17F-592B-4521-AA9E-E2D0E6368364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D13B17F-592B-4521-AA9E-E2D0E6368364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D13B17F-592B-4521-AA9E-E2D0E6368364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D13B17F-592B-4521-AA9E-E2D0E6368364}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
