@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 4. Find Evens or Od
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 5. Applied Arithmetics", "Problem 5. Applied Arithmetics\Problem 5. Applied Arithmetics.csproj", "{8E241AF5-4175-4CE8-BCA4-C6ABED332D7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 6. Reverse and Exclude", "Problem 6. Reverse and Exclude\Problem 6. Reverse and Exclude.csproj", "{5D13B17F-592B-4521-AA9E-E2D0E6368364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 6. Reverse and Exclude", "Problem 6. Reverse and Exclude\Problem 6. Reverse and Exclude.csproj", "{5D13B17F-592B-4521-AA9E-E2D0E6368364}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 7. Predicate for Names", "Problem 7. Predicate for Names\Problem 7. Predicate for Names.csproj", "{27A6A398-12B3-4663-8366-18C088F718BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 7. Predicate for Names", "Problem 7. Predicate for Names\Problem 7. Predicate for Names.csproj", "{27A6A398-12B3-4663-8366-18C088F718BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 8. Custom Comparator", "Problem 8. Custom Comparator\Problem 8. Custom Comparator.csproj", "{4C70AC07-870D-4BF7-960B-D25B02C60D4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 8. Custom Comparator", "Problem 8. Custom Comparator\Problem 8. Custom Comparator.csproj", "{4C70AC07-870D-4BF7-960B-D25B02C60D4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 9. List of Predicates", "Problem 9. List of Predicates\Problem 9. List of Predicates.csproj", "{90A2BB74-56C4-434E-B7B9-8C9F1E50E1CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{4C70AC07-870D-4BF7-960B-D25B02C60D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C70AC07-870D-4BF7-960B-D25B02C60D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C70AC07-870D-4BF7-960B-D25B02C60D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A2BB74-56C4-434E-B7B9-8C9F1E50E1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A2BB74-56C4-434E-B7B9-8C9F1E50E1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A2BB74-56C4-434E-B7B9-8C9F1E50E1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A2BB74-56C4-434E-B7B9-8C9F1E50E1CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
