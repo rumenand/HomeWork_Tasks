@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Problem_9._List_of_Predicates
 {
@@ -10,13 +11,26 @@ namespace Problem_9._List_of_Predicates
             int N = int.Parse(Console.ReadLine());
             var numbers = new int[N];
             var dividers = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            Func<int, bool> checker = n => dividers.All(x=>n%x ==0);
-            for (int i=0;i<N;i++)
+            var predicates = dividers.Select(div => (Func<int, bool>)(n => n % div == 0)).ToArray();
+            var lisPossibleNums = new List<int>();
+            for (int i=1;i<=N;i++)
             {
-                numbers[i] = i + 1;
+                if (checkValid(predicates,i)) lisPossibleNums.Add(i);               
+            }            
+            Console.WriteLine(string.Join(" ", lisPossibleNums));
+        }
+
+        static bool checkValid (Func<int, bool> [] predicates, int num)
+        {
+            foreach (var predicate in predicates)
+            {
+                if (!predicate(num))
+                {
+                    return false;
+                }
             }
-            var result = numbers.Where(checker);
-            Console.WriteLine(string.Join(" ",result));
+
+            return true;
         }
     }
 }
