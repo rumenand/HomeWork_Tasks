@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 7. Predicate for Na
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 8. Custom Comparator", "Problem 8. Custom Comparator\Problem 8. Custom Comparator.csproj", "{4C70AC07-870D-4BF7-960B-D25B02C60D4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 9. List of Predicates", "Problem 9. List of Predicates\Problem 9. List of Predicates.csproj", "{90A2BB74-56C4-434E-B7B9-8C9F1E50E1CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 9. List of Predicates", "Problem 9. List of Predicates\Problem 9. List of Predicates.csproj", "{90A2BB74-56C4-434E-B7B9-8C9F1E50E1CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 10.   Predicate Party!", "Problem 10.   Predicate Party!\Problem 10.   Predicate Party!.csproj", "{BE486C9E-8D5B-432A-9F2E-EC54A472D4EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 10.   Predicate Party!", "Problem 10.   Predicate Party!\Problem 10.   Predicate Party!.csproj", "{BE486C9E-8D5B-432A-9F2E-EC54A472D4EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pr11.  Party Reserv Filter Module", "Pr11.  Party Reserv Filter Module\Pr11.  Party Reserv Filter Module.csproj", "{E5AB6BEE-1714-4C34-8999-244AA749F840}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{BE486C9E-8D5B-432A-9F2E-EC54A472D4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE486C9E-8D5B-432A-9F2E-EC54A472D4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE486C9E-8D5B-432A-9F2E-EC54A472D4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5AB6BEE-1714-4C34-8999-244AA749F840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AB6BEE-1714-4C34-8999-244AA749F840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AB6BEE-1714-4C34-8999-244AA749F840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AB6BEE-1714-4C34-8999-244AA749F840}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
