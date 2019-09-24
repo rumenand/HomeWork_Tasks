@@ -14,27 +14,18 @@ namespace _6._Jagged_Array_Manipulator
                 var col = Console.ReadLine().Split().Select(double.Parse).ToArray();
                 jagged[i] = col;
             }
+            Func<double, bool, double> Calculate = (num, div) => (div ? num / 2 : num * 2);
             for (int i=0;i<N-1;i++)
             {
-                if (jagged[i].Length == jagged[i + 1].Length)
-                {
+                bool divison = (jagged[i].Length != jagged[i + 1].Length);                                  
                     for (int j=0; j<jagged[i].Length; j++)
                     {
-                        jagged[i][j] *= 2;
-                        jagged[i + 1][j] *= 2;
-                    }
-                }
-                else
-                {
-                    for (int j = 0; j < jagged[i].Length; j++)
-                    {
-                        jagged[i][j] /= 2;                        
+                        jagged[i][j]  = Calculate(jagged[i][j],divison);
                     }
                     for (int j = 0; j < jagged[i+1].Length; j++)
                     {
-                        jagged[i+1][j] /= 2;
-                    }
-                }
+                        jagged[i + 1][j] = Calculate(jagged[i+1][j], divison);
+                    }                              
             }
             string input;
             while ((input = Console.ReadLine()) != "End")
