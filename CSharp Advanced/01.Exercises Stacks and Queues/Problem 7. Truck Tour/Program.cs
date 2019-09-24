@@ -4,45 +4,46 @@ using System.Linq;
 
 namespace Problem_7._Truck_Tour
 {
+    class FuelStation
+    {
+        public int fuel;
+        public int distanceToNext;
+
+        public FuelStation(int fuel, int distanceToNext)
+        {
+            this.fuel = fuel;
+            this.distanceToNext = distanceToNext;
+        }
+    }
+
     class Program
     {
         static void Main()
         {
             int N = int.Parse(Console.ReadLine());
-            var circle = new Queue<string>();
+            var circle = new Queue<FuelStation>();
             for (int i=0; i<N; i++)
             {
-                circle.Enqueue(i+" "+Console.ReadLine());               
+                var input = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                circle.Enqueue(new FuelStation(input[0],input[1]));             
             }
-            
-            while (circle.Count > 0)
+            int _firstPossible = -1;
+            for (int station = 0; station<circle.Count; station++)
             {
-                bool found = true;
-                int[] first = circle.Dequeue().Split().Select(int.Parse).ToArray();
-                int fuel = first[1];
-                int distance = first[2];
-                if (fuel > distance)
+                int fuelTank = 0;
+                foreach(var currentStation in circle)
                 {
-                    foreach (var station in circle)
-                    {
-                        fuel -= distance;
-                        int[] next = station.Split().Select(int.Parse).ToArray();
-                        distance = next[2];
-                        fuel += next[1];
-                        if (fuel < distance)
-                        {
-                            found = false;
-                            break;
-                        }
-                    }
-                    if (found)
-                    {
-                        Console.WriteLine(first[0]);
-                        break;
-                    }
-
+                    fuelTank += currentStation.fuel - currentStation.distanceToNext;                  
+                    if (fuelTank < 0) break;
                 }
+                if (fuelTank > 0)
+                {
+                    _firstPossible = station;
+                    break;
+                }
+                else circle.Enqueue(circle.Dequeue());
             }
+            Console.WriteLine(_firstPossible>-1 ? _firstPossible.ToString() : "");
         }
     }
 }
