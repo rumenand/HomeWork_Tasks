@@ -34,7 +34,7 @@ namespace Problem_8._Balanced_Parentheses
                 }
                 if (!balanced) break;
             }
-            Console.WriteLine(balanced  && stack.Count == 0? "YES" : "NO");
+            Console.WriteLine(balanced && stack.Count == 0 ? "YES" : "NO");
         }
     }
 }
