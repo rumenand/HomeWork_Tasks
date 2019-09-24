@@ -20,16 +20,13 @@ namespace Problem_8._Balanced_Parentheses
                         stack.Push(ch);
                         break;
                     case '}':
-                        if (stack.Count != 0 && stack.Pop() == '{') balanced = true;
-                        else balanced = false;
+                        if (stack.Count == 0 || stack.Pop() != '{') balanced = false;
                         break;
                     case ')':
-                        if (stack.Count != 0 && stack.Pop() == '(') balanced = true;
-                        else balanced = false;
+                        if (stack.Count == 0 || stack.Pop() != '(') balanced = false;
                         break;
                     case ']':
-                        if (stack.Count != 0 && stack.Pop() == '[') balanced = true;
-                        else balanced = false;
+                        if (stack.Count == 0 || stack.Pop() != '[') balanced = false;
                         break;
                 }
                 if (!balanced) break;
