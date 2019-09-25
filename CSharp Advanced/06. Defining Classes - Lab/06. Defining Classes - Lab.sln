@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3. Car Constructors
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 4. Car Engine and Tires", "Problem 4. Car Engine and Tires\Problem 4. Car Engine and Tires.csproj", "{39441608-AB19-4548-B2FD-EDCDBB51A003}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Special Cars", "Problem 5. Special Cars\Problem 5. Special Cars.csproj", "{EAC380EC-5183-4D86-AFCE-C1ADEAEC9E9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{39441608-AB19-4548-B2FD-EDCDBB51A003}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39441608-AB19-4548-B2FD-EDCDBB51A003}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39441608-AB19-4548-B2FD-EDCDBB51A003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC380EC-5183-4D86-AFCE-C1ADEAEC9E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC380EC-5183-4D86-AFCE-C1ADEAEC9E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC380EC-5183-4D86-AFCE-C1ADEAEC9E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC380EC-5183-4D86-AFCE-C1ADEAEC9E9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
