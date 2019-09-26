@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 1. Define a Class Person", "Problem 1. Define a Class Person\Problem 1. Define a Class Person.csproj", "{6EF6A55F-BB00-40E0-9EAF-C6FDA6A21B80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2. Creating Constructors", "Problem 2. Creating Constructors\Problem 2. Creating Constructors.csproj", "{C94E94DD-BA7C-47C3-AF19-1EDAE93DB2CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6EF6A55F-BB00-40E0-9EAF-C6FDA6A21B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EF6A55F-BB00-40E0-9EAF-C6FDA6A21B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EF6A55F-BB00-40E0-9EAF-C6FDA6A21B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94E94DD-BA7C-47C3-AF19-1EDAE93DB2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94E94DD-BA7C-47C3-AF19-1EDAE93DB2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94E94DD-BA7C-47C3-AF19-1EDAE93DB2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94E94DD-BA7C-47C3-AF19-1EDAE93DB2CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
