@@ -1,11 +1,12 @@
 ﻿using System;
 
-namespace Problem_1.Define_a_Class_Person
+namespace DefiningClasses
 {
-    class Program
+    public class StartUp
     {
         static void Main()
         {
+
         }
     }
 }
