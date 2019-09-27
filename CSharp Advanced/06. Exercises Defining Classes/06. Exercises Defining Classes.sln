@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem5DateModifier", "Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 6. Speed Racing", "Problem 6. Speed Racing\Problem 6. Speed Racing.csproj", "{5324AB23-2197-4139-A374-E2A1F4D6078A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 7. Raw Data", "Problem 7. Raw Data\Problem 7. Raw Data.csproj", "{AE28600E-2B50-4954-A078-5EAFAE110E7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{5324AB23-2197-4139-A374-E2A1F4D6078A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5324AB23-2197-4139-A374-E2A1F4D6078A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5324AB23-2197-4139-A374-E2A1F4D6078A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE28600E-2B50-4954-A078-5EAFAE110E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE28600E-2B50-4954-A078-5EAFAE110E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE28600E-2B50-4954-A078-5EAFAE110E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE28600E-2B50-4954-A078-5EAFAE110E7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
