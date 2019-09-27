@@ -6,7 +6,7 @@ namespace DefiningClasses
     {
         static void Main()
         {
-
+            
         }
     }
 }

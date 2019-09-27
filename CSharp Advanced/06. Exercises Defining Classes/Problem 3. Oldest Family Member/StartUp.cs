@@ -1,12 +1,18 @@
 ﻿using System;
-using System.Linq;
+using System.Reflection;
 
 namespace DefiningClasses
 {
     public class StartUp
     {
-        static void Main()
+        public static void Main()
         {
+            MethodInfo oldestMemberMethod = typeof(Family).GetMethod("GetOldestMember");
+            MethodInfo addMemberMethod = typeof(Family).GetMethod("AddMember");
+            if (oldestMemberMethod == null || addMemberMethod == null)
+            {
+                throw new Exception();
+            }
             int N = int.Parse(Console.ReadLine());
             Family family = new Family();
             for (int i=0; i<N;i++)

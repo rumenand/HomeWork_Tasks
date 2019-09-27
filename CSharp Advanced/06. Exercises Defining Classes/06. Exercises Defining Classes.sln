@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 1. Define a Class Person", "Problem 1. Define a Class Person\Problem 1. Define a Class Person.csproj", "{6EF6A55F-BB00-40E0-9EAF-C6FDA6A21B80}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 4. Opinion Poll", "Problem 4. Opinion Poll\Problem 4. Opinion Poll.csproj", "{52999426-3470-4119-835B-068924628875}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Date Modifier", "Problem 5. Date Modifier\Problem 5. Date Modifier.csproj", "{1C9DBB37-B625-41F0-9739-0BA41ABE1F85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 5. Date Modifier - Core", "Problem 5. Date Modifier - Core\Problem 5. Date Modifier - Core.csproj", "{1A762013-55E6-4B68-B2C3-61A70B7A5C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem5DateModifier", "Problem5DateModifier\Problem5DateModifier.csproj", "{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{1C9DBB37-B625-41F0-9739-0BA41ABE1F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C9DBB37-B625-41F0-9739-0BA41ABE1F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C9DBB37-B625-41F0-9739-0BA41ABE1F85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A762013-55E6-4B68-B2C3-61A70B7A5C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A762013-55E6-4B68-B2C3-61A70B7A5C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A762013-55E6-4B68-B2C3-61A70B7A5C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A762013-55E6-4B68-B2C3-61A70B7A5C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
