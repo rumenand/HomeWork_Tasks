@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Date Modifier", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 5. Date Modifier - Core", "Problem 5. Date Modifier - Core\Problem 5. Date Modifier - Core.csproj", "{1A762013-55E6-4B68-B2C3-61A70B7A5C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem5DateModifier", "Problem5DateModifier\Problem5DateModifier.csproj", "{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem5DateModifier", "Problem5DateModifier\Problem5DateModifier.csproj", "{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 6. Speed Racing", "Problem 6. Speed Racing\Problem 6. Speed Racing.csproj", "{5324AB23-2197-4139-A374-E2A1F4D6078A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D611AAF-EDA1-4830-ACEF-E3FE42B65F50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5324AB23-2197-4139-A374-E2A1F4D6078A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5324AB23-2197-4139-A374-E2A1F4D6078A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5324AB23-2197-4139-A374-E2A1F4D6078A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5324AB23-2197-4139-A374-E2A1F4D6078A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
