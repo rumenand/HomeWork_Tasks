@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 6. Speed Racing", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 7. Raw Data", "Problem 7. Raw Data\Problem 7. Raw Data.csproj", "{AE28600E-2B50-4954-A078-5EAFAE110E7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateModifier", "DateModifier\DateModifier.csproj", "{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{AE28600E-2B50-4954-A078-5EAFAE110E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE28600E-2B50-4954-A078-5EAFAE110E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE28600E-2B50-4954-A078-5EAFAE110E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
