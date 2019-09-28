@@ -14,15 +14,15 @@ namespace SpeedRacing
                 var input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
                 var newCar = new Car();
                 newCar.Model = input[0];
-                newCar.FuelAmount = double.Parse(input[1]);
-                newCar.FuelConsumptionPerKilometer = double.Parse(input[2]);
-                carsList.Add(newCar.Model, newCar);
+                newCar.FuelAmount = decimal.Parse(input[1]);
+                newCar.FuelConsumptionPerKilometer = decimal.Parse(input[2]);
+                carsList[input[0]] = newCar;
             }
             string line;
             while ((line = Console.ReadLine()) != "End")
             {
-                var commands = line.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                if (!carsList[commands[1]].Drive(int.Parse(commands[2]))) Console.WriteLine("Insufficient fuel for the drive");
+                var commands = line.Split();                
+                if (carsList.ContainsKey(commands[1]) && !carsList[commands[1]].Drive(int.Parse(commands[2]))) Console.WriteLine("Insufficient fuel for the drive");
             }
             foreach (var car in carsList)
             {

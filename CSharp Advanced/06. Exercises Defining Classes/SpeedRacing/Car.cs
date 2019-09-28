@@ -6,42 +6,17 @@ namespace SpeedRacing
 {
     class Car
     {
-        private string model;
-        private double fuelAmount;
-        private double fuelConsumptionPerKilometer;
-        private double travelledDistance;
-
-        public double TravelledDistance
-        {
-            get { return travelledDistance; }
-            set { travelledDistance = value; }
-        }
-
-
-        public double FuelConsumptionPerKilometer
-        {
-            get { return fuelConsumptionPerKilometer; }
-            set { fuelConsumptionPerKilometer = value; }
-        }
-        public double FuelAmount
-        {
-            get { return fuelAmount; }
-            set { fuelAmount = value; }
-        }
-
-        public string Model
-        {
-            get { return model; }
-            set { model = value; }
-        }
-
+        public int TravelledDistance { get; set; }
+        public decimal FuelConsumptionPerKilometer { get; set; }
+        public decimal FuelAmount { get; set; }   
+        public string Model { get; set; }
         public bool Drive(int distance)
         {
-            var neededFuel = distance * FuelConsumptionPerKilometer;
-            if (fuelAmount > neededFuel)
+            decimal neededFuel = distance * FuelConsumptionPerKilometer;
+            if (FuelAmount >= neededFuel)
             {
-                fuelAmount -= neededFuel;
-                travelledDistance += distance;
+                FuelAmount -= neededFuel;
+                TravelledDistance += distance;
                 return true;
             }
             return false;
