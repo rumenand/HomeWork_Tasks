@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 1. Define a Class P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2. Creating Constructors", "Problem 2. Creating Constructors\Problem 2. Creating Constructors.csproj", "{C94E94DD-BA7C-47C3-AF19-1EDAE93DB2CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3. Oldest Family Member", "Problem 3. Oldest Family Member\Problem 3. Oldest Family Member.csproj", "{14061370-32D3-4453-A8EA-D0C9D5C2C5AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pr3.OldestFamilyMember", "Problem 3. Oldest Family Member\Pr3.OldestFamilyMember.csproj", "{14061370-32D3-4453-A8EA-D0C9D5C2C5AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 4. Opinion Poll", "Problem 4. Opinion Poll\Problem 4. Opinion Poll.csproj", "{52999426-3470-4119-835B-068924628875}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 7. Raw Data", "Problem 7. Raw Data\Problem 7. Raw Data.csproj", "{AE28600E-2B50-4954-A078-5EAFAE110E7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateModifier", "DateModifier\DateModifier.csproj", "{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldestFamilyMember", "OldestFamilyMember\OldestFamilyMember.csproj", "{D00F94E5-675B-4389-BFC4-FA77A97681DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2821C8E-E0A3-486C-BF01-65EAD96F9A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00F94E5-675B-4389-BFC4-FA77A97681DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00F94E5-675B-4389-BFC4-FA77A97681DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00F94E5-675B-4389-BFC4-FA77A97681DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00F94E5-675B-4389-BFC4-FA77A97681DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
