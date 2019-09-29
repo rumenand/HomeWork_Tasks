@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace BoxOfT
 {
-    class Box<T>
+    public class Box<T>
     {
         private List<T> data;
         public Box()

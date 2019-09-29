@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace BoxOfT
+namespace GenericArrayCreator
 {
     public class StartUp
     {
         static void Main()
         {
-            
+           
         }
     }
 }
