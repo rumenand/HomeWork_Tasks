@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Threeuple
 {
-    class Tuple<TKey,TValue1,TValue2>
+    public class Tuple<TKey,TValue1,TValue2> : IWritable
     {
         public TKey Item1 { get; set; }
         public TValue1 Item2 { get; set; }
@@ -14,12 +11,10 @@ namespace Threeuple
             this.Item1 = item1;
             this.Item2 = item2;
             this.Item3 = item3;
-        }
-        public override string ToString()
+        }        
+        public string WriteMe()
         {
             return $"{Item1} -> {Item2} -> {Item3}";
         }
-
-
     }
 }
