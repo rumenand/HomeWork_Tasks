@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 
 namespace Problem_2._Line_Numbers
 {
@@ -6,7 +8,17 @@ namespace Problem_2._Line_Numbers
     {
         static void Main()
         {
-          
+            var lines = File.ReadAllLines(@"text.txt");
+            using (StreamWriter outputFile = new StreamWriter("output.txt"))
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    var letters = lines[i].Count(char.IsLetter);
+                    var punctuations = lines[i].Count(char.IsPunctuation);
+                    outputFile.WriteLine($"Lines {i+1}: {lines[i]} ({letters})({punctuations})");
+                }
+                
+            }
         }
     }
 }
