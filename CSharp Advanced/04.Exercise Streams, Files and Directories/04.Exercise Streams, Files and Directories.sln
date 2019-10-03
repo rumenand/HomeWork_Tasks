@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 1. Even Lines", "Problem 1. Even Lines\Problem 1. Even Lines.csproj", "{035341BF-79A9-48CA-8F35-55DFF2A23785}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2. Line Numbers", "Problem 2. Line Numbers\Problem 2. Line Numbers.csproj", "{35A50D0A-1938-4023-A787-87B57BECD981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 2. Line Numbers", "Problem 2. Line Numbers\Problem 2. Line Numbers.csproj", "{35A50D0A-1938-4023-A787-87B57BECD981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3. Word Count", "Problem 3. Word Count\Problem 3. Word Count.csproj", "{F44484C8-6841-4261-8419-0847312FB6A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{35A50D0A-1938-4023-A787-87B57BECD981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35A50D0A-1938-4023-A787-87B57BECD981}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35A50D0A-1938-4023-A787-87B57BECD981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44484C8-6841-4261-8419-0847312FB6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44484C8-6841-4261-8419-0847312FB6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44484C8-6841-4261-8419-0847312FB6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44484C8-6841-4261-8419-0847312FB6A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
