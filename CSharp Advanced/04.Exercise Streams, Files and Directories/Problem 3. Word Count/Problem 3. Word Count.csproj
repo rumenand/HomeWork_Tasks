@@ -6,4 +6,13 @@
     <RootNamespace>Problem_3._Word_Count</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="text.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
