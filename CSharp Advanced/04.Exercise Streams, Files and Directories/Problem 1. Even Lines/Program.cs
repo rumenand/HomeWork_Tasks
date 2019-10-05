@@ -10,7 +10,7 @@ namespace Problem_1._Even_Lines
         {
             char[] separators = new char[] { '-', ',', '.', '!', '?' };
             Func<string, string> replacer = x => separators.Aggregate(x, (c1, c2) => c1.Replace(c2, '@'));
-            StreamReader reader = new StreamReader("text.txt");
+            StreamReader reader = new StreamReader(@"..\..\..\..\Resources\text.txt");
             using (reader)
             {
                 int lineNumber = 0;
