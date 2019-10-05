@@ -8,8 +8,8 @@ namespace Problem_2._Line_Numbers
     {
         static void Main()
         {
-            var lines = File.ReadAllLines(@"text.txt");
-            using (StreamWriter outputFile = new StreamWriter("output.txt"))
+            var lines = File.ReadAllLines(@"..\..\..\..\Resources\text.txt");
+            using (StreamWriter outputFile = new StreamWriter(@"..\..\..\Output\output.txt"))
             {
                 for (int i = 0; i < lines.Length; i++)
                 {
