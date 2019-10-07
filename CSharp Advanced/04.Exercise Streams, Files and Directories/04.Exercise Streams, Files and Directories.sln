@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 2. Line Numbers", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 3. Word Count", "Problem 3. Word Count\Problem 3. Word Count.csproj", "{F44484C8-6841-4261-8419-0847312FB6A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 4. Copy Binary File", "Problem 4. Copy Binary File\Problem 4. Copy Binary File.csproj", "{E03AD3E9-7B2B-4D39-90C3-74568F780B1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 4. Copy Binary File", "Problem 4. Copy Binary File\Problem 4. Copy Binary File.csproj", "{E03AD3E9-7B2B-4D39-90C3-74568F780B1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5. Directory Traversal", "Problem 5. Directory Traversal\Problem 5. Directory Traversal.csproj", "{5B9E05A7-DD37-45D8-AD9D-08C0DD63C5F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem 5. Directory Traversal", "Problem 5. Directory Traversal\Problem 5. Directory Traversal.csproj", "{5B9E05A7-DD37-45D8-AD9D-08C0DD63C5F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 6. Zip and Extract", "Problem 6. Zip and Extract\Problem 6. Zip and Extract.csproj", "{756CE63A-1592-47FF-87F5-9CCCEA5A2142}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5B9E05A7-DD37-45D8-AD9D-08C0DD63C5F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B9E05A7-DD37-45D8-AD9D-08C0DD63C5F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B9E05A7-DD37-45D8-AD9D-08C0DD63C5F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756CE63A-1592-47FF-87F5-9CCCEA5A2142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756CE63A-1592-47FF-87F5-9CCCEA5A2142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756CE63A-1592-47FF-87F5-9CCCEA5A2142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756CE63A-1592-47FF-87F5-9CCCEA5A2142}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
