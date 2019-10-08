@@ -64,7 +64,7 @@ namespace Pr11.__Party_Reserv_Filter_Module
             {
                 case "Starts with": return (n => n.StartsWith(value));
                 case "Ends with": return (n => n.EndsWith(value));
-                case "Length": return (n => n.Length == value.Length);
+                case "Length": return (n => n.Length == int.Parse(value));
                 case "Contains": return (n => n.Contains(value));
             }
             return null;
