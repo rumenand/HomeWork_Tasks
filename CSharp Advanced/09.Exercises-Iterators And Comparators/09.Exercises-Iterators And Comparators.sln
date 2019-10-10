@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 1. ListyIterator", "Problem 1. ListyIterator\Problem 1. ListyIterator.csproj", "{0FC736FE-FA31-4C8C-B877-8CC1038A5648}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2. Collection", "Problem 2. Collection\Problem 2. Collection.csproj", "{D0D53817-9890-456B-BAF5-5B2F35C8CE74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0FC736FE-FA31-4C8C-B877-8CC1038A5648}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FC736FE-FA31-4C8C-B877-8CC1038A5648}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FC736FE-FA31-4C8C-B877-8CC1038A5648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D53817-9890-456B-BAF5-5B2F35C8CE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D53817-9890-456B-BAF5-5B2F35C8CE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D53817-9890-456B-BAF5-5B2F35C8CE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D53817-9890-456B-BAF5-5B2F35C8CE74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
