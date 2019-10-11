@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Froggy
 {
@@ -6,7 +7,10 @@ namespace Froggy
     {
         static void Main()
         {
-            
+            var stonesList = Console.ReadLine().Split(",", StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse).ToArray();
+            var frogLake = new Lake(stonesList);
+            Console.WriteLine(string.Join(", ", frogLake));
         }
     }
 }
