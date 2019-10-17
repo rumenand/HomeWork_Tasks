@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29324.140
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBoxofString", "GenericBoxofString\GenericBoxofString.csproj", "{396D634C-3A84-466A-ADF2-980479E747D8}"
 EndProject
@@ -13,11 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSwapMethodIntegers",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericCountMethodStrings", "GenericCountMethodStrings\GenericCountMethodStrings.csproj", "{BB056CDB-0F0F-405D-9921-BB552848CF38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericCountMethodDoubles", "GenericCountMethodDoubles\GenericCountMethodDoubles.csproj", "{8DEFB88C-4ACF-480F-A84A-BD29F8033B30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericCountMethodDoubles", "GenericCountMethodDoubles\GenericCountMethodDoubles.csproj", "{8DEFB88C-4ACF-480F-A84A-BD29F8033B30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuples", "Tuple\Tuples.csproj", "{28CDB8D9-865B-43BB-95D1-5354ABA555A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tuples", "Tuple\Tuples.csproj", "{28CDB8D9-865B-43BB-95D1-5354ABA555A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threeuple", "Threeuple\Threeuple.csproj", "{869A1A50-1E4E-4C14-8EFC-CE26FEC24CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threeuple", "Threeuple\Threeuple.csproj", "{869A1A50-1E4E-4C14-8EFC-CE26FEC24CF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLinkedList", "CustomLinkedList\CustomLinkedList.csproj", "{434894F8-991C-443A-AC2A-4AEE8E3D3F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLinkedList2", "CustomLinkedList2\CustomLinkedList2.csproj", "{9BFD0F73-B5EE-4561-AF26-3B0979A8B03E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{869A1A50-1E4E-4C14-8EFC-CE26FEC24CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{869A1A50-1E4E-4C14-8EFC-CE26FEC24CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{869A1A50-1E4E-4C14-8EFC-CE26FEC24CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{434894F8-991C-443A-AC2A-4AEE8E3D3F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434894F8-991C-443A-AC2A-4AEE8E3D3F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{434894F8-991C-443A-AC2A-4AEE8E3D3F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{434894F8-991C-443A-AC2A-4AEE8E3D3F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFD0F73-B5EE-4561-AF26-3B0979A8B03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFD0F73-B5EE-4561-AF26-3B0979A8B03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFD0F73-B5EE-4561-AF26-3B0979A8B03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFD0F73-B5EE-4561-AF26-3B0979A8B03E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
