@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Rhombus of Stars", "1. Rhombus of Stars\1. Rhombus of Stars.csproj", "{A504FDD4-3D14-458E-8C17-68DF1AF8E82F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Rhombus of Stars", "1. Rhombus of Stars\1. Rhombus of Stars.csproj", "{A504FDD4-3D14-458E-8C17-68DF1AF8E82F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointInRectangle", "PointInRectangle\PointInRectangle.csproj", "{E8C80853-03E4-4534-81F1-9A95B153700A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointInRectangle", "PointInRectangle\PointInRectangle.csproj", "{E8C80853-03E4-4534-81F1-9A95B153700A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_StudentSystem", "P03_StudentSystem\P03_StudentSystem.csproj", "{E98F7C05-9DA7-4CF1-A1E9-3137912254F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E8C80853-03E4-4534-81F1-9A95B153700A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8C80853-03E4-4534-81F1-9A95B153700A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8C80853-03E4-4534-81F1-9A95B153700A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98F7C05-9DA7-4CF1-A1E9-3137912254F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98F7C05-9DA7-4CF1-A1E9-3137912254F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98F7C05-9DA7-4CF1-A1E9-3137912254F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98F7C05-9DA7-4CF1-A1E9-3137912254F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
