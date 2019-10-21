@@ -4,62 +4,63 @@ using System.Linq;
 namespace P03_JediGalaxy
 {
     class Program
-    {
+    {        
         static void Main()
         {
-            int[] dimestions = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-            int x = dimestions[0];
-            int y = dimestions[1];
+            int[] dimestions = GetItegerInput(Console.ReadLine());                          
+            int[,] matrix = new int [dimestions[0],dimestions[1]];
+            FillMatrix(matrix); 
 
-            int[,] matrix = new int[x, y];
+            Func<int, int, bool> EvilRestrict = (x, y) => x >= 0 && y >= 0;
+            Func<int, int, bool> IvoRestrict = (x, y) => x >= 0 && y < matrix.GetLength(1);
+            Func<int, int, bool> IsInMatrix = (x, y) => x >= 0 && x<matrix.GetLength(0) && y >= 0 && y<matrix.GetLength(1);
 
-            int value = 0;
-            for (int i = 0; i < x; i++)
+            string command;
+            long sum = 0;
+            while ((command= Console.ReadLine())!= "Let the Force be with you")
             {
-                for (int j = 0; j < y; j++)
+                int[] ivoS = GetItegerInput(command);
+                int[] evil = GetItegerInput(Console.ReadLine());
+                MoveInMatrix(evil, matrix, EvilRestrict, IsInMatrix, true);
+                sum += MoveInMatrix(ivoS, matrix, IvoRestrict, IsInMatrix, false);             
+            }
+            Console.WriteLine(sum);
+        }        
+
+        private static int[] GetItegerInput(string v)
+        {
+            return v.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+        }
+
+        private static void FillMatrix(int[,] matrix)
+        {
+            int value = 0;
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     matrix[i, j] = value++;
                 }
             }
+        }
 
-            string command = Console.ReadLine();
+        private static long MoveInMatrix(int [] coord, int [,] matrix, Func<int,int,bool> Restrict, Func<int,int,bool> Check, bool evil)
+        {
             long sum = 0;
-            while (command != "Let the Force be with you")
+            int x = coord[0];
+            int y = coord[1];
+
+            while (Restrict(x, y))
             {
-                int[] ivoS = command.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-                int[] evil = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-                int xE = evil[0];
-                int yE = evil[1];
-
-                while (xE >= 0 && yE >= 0)
+                if (Check(x, y))
                 {
-                    if (xE >= 0 && xE < matrix.GetLength(0) && yE >= 0 && yE < matrix.GetLength(1))
-                    {
-                        matrix[xE, yE] = 0;
-                    }
-                    xE--;
-                    yE--;
+                    if (evil) matrix[x, y] = 0;
+                    else sum += matrix[x, y];
                 }
-
-                int xI = ivoS[0];
-                int yI = ivoS[1];
-
-                while (xI >= 0 && yI < matrix.GetLength(1))
-                {
-                    if (xI >= 0 && xI < matrix.GetLength(0) && yI >= 0 && yI < matrix.GetLength(1))
-                    {
-                        sum += matrix[xI, yI];
-                    }
-
-                    yI++;
-                    xI--;
-                }
-
-                command = Console.ReadLine();
+                x--;
+                y = (evil) ? y - 1 : y + 1;
             }
-
-            Console.WriteLine(sum);
-
+            return sum;
         }
     }
 }
