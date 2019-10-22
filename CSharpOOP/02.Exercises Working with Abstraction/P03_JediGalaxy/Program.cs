@@ -7,30 +7,26 @@ namespace P03_JediGalaxy
     {        
         static void Main()
         {
-            int[] dimestions = GetItegerInput(Console.ReadLine());                          
+            Func<string, int[]> GetIntegerInput = x => x.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            
+            int[] dimestions = GetIntegerInput(Console.ReadLine());                          
             int[,] matrix = new int [dimestions[0],dimestions[1]];
-            FillMatrix(matrix); 
+            FillMatrix(matrix);
 
             Func<int, int, bool> EvilRestrict = (x, y) => x >= 0 && y >= 0;
             Func<int, int, bool> IvoRestrict = (x, y) => x >= 0 && y < matrix.GetLength(1);
-            Func<int, int, bool> IsInMatrix = (x, y) => x >= 0 && x<matrix.GetLength(0) && y >= 0 && y<matrix.GetLength(1);
 
             string command;
             long sum = 0;
             while ((command= Console.ReadLine())!= "Let the Force be with you")
             {
-                int[] ivoS = GetItegerInput(command);
-                int[] evil = GetItegerInput(Console.ReadLine());
-                MoveInMatrix(evil, matrix, EvilRestrict, IsInMatrix, true);
-                sum += MoveInMatrix(ivoS, matrix, IvoRestrict, IsInMatrix, false);             
+                int[] ivoS = GetIntegerInput(command);
+                int[] evil = GetIntegerInput(Console.ReadLine());
+                MoveInMatrix(evil, matrix, EvilRestrict, true); //Evil's Move
+                sum += MoveInMatrix(ivoS, matrix, IvoRestrict, false);  //Ivo's Move            
             }
             Console.WriteLine(sum);
-        }        
-
-        private static int[] GetItegerInput(string v)
-        {
-            return v.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-        }
+        }    
 
         private static void FillMatrix(int[,] matrix)
         {
@@ -44,15 +40,15 @@ namespace P03_JediGalaxy
             }
         }
 
-        private static long MoveInMatrix(int [] coord, int [,] matrix, Func<int,int,bool> Restrict, Func<int,int,bool> Check, bool evil)
+        private static long MoveInMatrix(int [] coord, int [,] matrix, Func<int,int,bool> Restrict, bool evil)
         {
+            Func<int, int, bool> IsInMatrix = (xPos, yPos) => xPos >= 0 && xPos < matrix.GetLength(0) && yPos >= 0 && yPos < matrix.GetLength(1);
             long sum = 0;
             int x = coord[0];
-            int y = coord[1];
-
+            int y = coord[1];           
             while (Restrict(x, y))
             {
-                if (Check(x, y))
+                if (IsInMatrix(x, y))
                 {
                     if (evil) matrix[x, y] = 0;
                     else sum += matrix[x, y];
