@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarden", "TheGarden\TheGarden.csproj", "{83F7C872-2524-42A8-AEF2-AEB320294AA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheGarden", "TheGarden\TheGarden.csproj", "{83F7C872-2524-42A8-AEF2-AEB320294AA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeASalad", "MakeASalad\MakeASalad.csproj", "{37B193A4-ED5D-4AAF-9C20-A0E7AC5D67B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MakeASalad", "MakeASalad\MakeASalad.csproj", "{37B193A4-ED5D-4AAF-9C20-A0E7AC5D67B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthyHeaven", "HealthyHeaven\HealthyHeaven.csproj", "{7F239685-7685-4CD2-BFCC-593DDE969E8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{37B193A4-ED5D-4AAF-9C20-A0E7AC5D67B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37B193A4-ED5D-4AAF-9C20-A0E7AC5D67B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37B193A4-ED5D-4AAF-9C20-A0E7AC5D67B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F239685-7685-4CD2-BFCC-593DDE969E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F239685-7685-4CD2-BFCC-593DDE969E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F239685-7685-4CD2-BFCC-593DDE969E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F239685-7685-4CD2-BFCC-593DDE969E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
