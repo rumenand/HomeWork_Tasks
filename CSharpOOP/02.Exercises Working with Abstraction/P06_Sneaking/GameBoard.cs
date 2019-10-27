@@ -30,13 +30,13 @@ namespace P06_Sneaking
                         playerNikoladze.XPos = i;
                         playerNikoladze.YPos = j;
                     }
-                    if (row[j] == 'S')
+                    else if (row[j] == 'S')
                     {
                         playerSam.XPos = i;
                         playerSam.YPos = j;
                     }                    
-                    if (row[j] == 'b') enemies.Add(new Enemy(i, j, false));
-                    if (row[j] == 'd') enemies.Add(new Enemy(i, j, true));
+                    else if (row[j] == 'b') enemies.Add(new Enemy(i, j, false));
+                    else if (row[j] == 'd') enemies.Add(new Enemy(i, j, true));
                 }
             }
         }
@@ -67,7 +67,7 @@ namespace P06_Sneaking
                     }
                     else sb.Append(".");
                 }
-                sb.Append(Environment.NewLine);
+                if (i != sizeX-1 )sb.Append(Environment.NewLine);
             }
             return sb.ToString();
         }
@@ -118,14 +118,14 @@ namespace P06_Sneaking
         {
             foreach (var enemy in enemies)
             {
-                if (enemy.GetDiection)
+                if (enemy.GetDiection) // Left
                 {
                     if (enemy.YPos > 0) enemy.YPos--;
                     else enemy.ChangeDirection();
                 }
-                else
+                else // Right
                 {
-                    if (enemy.XPos < sizeY) enemy.YPos++;
+                    if (enemy.YPos < sizeY-1) enemy.YPos++;
                     else enemy.ChangeDirection();
                 }
             }

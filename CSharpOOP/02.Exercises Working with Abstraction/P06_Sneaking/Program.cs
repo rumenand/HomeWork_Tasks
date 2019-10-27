@@ -14,15 +14,15 @@ namespace P06_Sneaking
             bool samDead = false;
             foreach (var move in moves)
             {
-                GameBoard.MoveEnemies();
+                GameBoard.MoveEnemies();                
                 if (GameBoard.ChekForEnemiesSeenSam())
                 {
                     samDead = true;
                     break;
                 }
                 GameBoard.MoveSam(move);
-                if (GameBoard.CheckForSamKillsNikoladze()) break;
                 GameBoard.CheckForSamKillsAnEnemy();
+                if (GameBoard.CheckForSamKillsNikoladze()) break;                
             }
             Console.WriteLine(GameBoard.GetGameResult(samDead));
             Console.WriteLine(GameBoard.PrintBoard(samDead));    
