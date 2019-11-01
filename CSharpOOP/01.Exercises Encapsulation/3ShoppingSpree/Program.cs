@@ -15,6 +15,7 @@ namespace _3ShoppingSpree
                 people = new List<Person>(Console.ReadLine()
                 .Split(new char[] { ';', ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(x => x.Split("=")).Select(x => new Person(x[0], decimal.Parse(x[1]))));
+
                 products = new List<Product>(Console.ReadLine()
                 .Split(new char[] { ';', ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(x => x.Split("=")).Select(y => new Product(y[0], decimal.Parse(y[1]))));

@@ -8,10 +8,5 @@ namespace Restaurant
         {
 
         }
-
-        public MainDish(string name, decimal price) : base(name,price)
-        {
-
-        }
     }
 }

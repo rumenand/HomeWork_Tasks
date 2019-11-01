@@ -29,7 +29,7 @@ namespace _3ShoppingSpree
             set
             {
                 if (value < 0) throw new ArgumentException("Money cannot be negative");
-                money = value;
+                this.money = value;
             }
         }
 
@@ -38,8 +38,8 @@ namespace _3ShoppingSpree
             get { return name; }
             set
             {
-                if (value == null || value == "") throw new ArgumentException("Name cannot be empty");
-                name = value;
+                if (string.IsNullOrEmpty(value)) throw new ArgumentException("Name cannot be empty");
+                this.name = value;
             }
         }
 

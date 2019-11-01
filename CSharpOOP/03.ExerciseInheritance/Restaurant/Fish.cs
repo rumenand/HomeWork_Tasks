@@ -7,9 +7,9 @@ namespace Restaurant
         {
            
         }
-        public Fish(string name, decimal price) : base(name,price)
+        public Fish(string name, decimal price) : base(name,price,22)
         {
-            this.Grams = 22;
+           
         }
     }
 }

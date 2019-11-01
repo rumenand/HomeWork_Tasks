@@ -7,10 +7,5 @@ namespace Restaurant
         {
 
         }
-
-        public HotBeverage(string name) : base(name)
-        {
-
-        }
     }
 }

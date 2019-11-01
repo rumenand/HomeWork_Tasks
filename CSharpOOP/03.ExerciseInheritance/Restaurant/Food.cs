@@ -5,17 +5,7 @@ namespace Restaurant
     {
         public Food(string name, decimal price, double grams) : base(name,price)
         {
-
-        }
-
-        public Food(string name) :base(name)
-        {
-
-        }
-
-        public Food(string name, decimal price) : base(name,price)
-        {
-
+            this.Grams = grams;
         }
 
         public double Grams { get; set; }
