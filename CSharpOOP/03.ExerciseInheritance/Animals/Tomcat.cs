@@ -3,14 +3,14 @@ namespace Animals
 {
     public class Tomcat : Cat
     {
-        public Tomcat(string name, int age, string gender) : base(name, age, gender)
+        public Tomcat(string name, int age, string gender) : base(name, age, "Male")
         {
-            this.Gender = "Male";
+
         }
 
-        public Tomcat(string name, int age):base(name,age)
+        public Tomcat(string name, int age):base(name,age,"Male")
         {
-            this.Gender = "Male";
+
         }
 
         public override string ProduceSound()

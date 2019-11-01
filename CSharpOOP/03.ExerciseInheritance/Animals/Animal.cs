@@ -15,13 +15,6 @@ namespace Animals
             this.Age = age;
             this.Gender = gender;       
         }
-
-        public Animal(string name, int age)
-        {
-            this.Name = name;
-            this.Age = age;
-        }
-
         public string Name
         {
             get { return this.name; }
