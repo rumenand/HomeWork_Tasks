@@ -31,7 +31,6 @@ namespace _4PizzaCalories
 
         private int Weight
         {
-            get => this.weight;
             set
             {
                 if (value < 1 || value > 50)
@@ -40,10 +39,7 @@ namespace _4PizzaCalories
             }                
         }
 
-        public double GetCalories()
-        {
-            return this.Weight * 2 * this.typeValue;
-        }
+        internal double GetCalories()  => this.weight * 2 * this.typeValue;        
 
         private double GetTypeOfModifier(string type)
         {

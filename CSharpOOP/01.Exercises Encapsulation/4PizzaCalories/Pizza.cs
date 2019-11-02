@@ -10,9 +10,10 @@ namespace _4PizzaCalories
         private Dough dough;
         private string name;
 
-        public Pizza(string name)
+        public Pizza(string name, Dough dough)
         {
             this.Name = name;
+            this.dough = dough;
             this.topping = new List<Topping>();
         }
 
@@ -21,23 +22,16 @@ namespace _4PizzaCalories
             get => this.name;
             private set
             {
-                if (value.Length > 15 || value.Length==0)
+                if (value.Length > 15 || string.IsNullOrEmpty(value))
                     throw new ArgumentException("Pizza name should be between 1 and 15 symbols.");
                 this.name = value;
-            }                
-         }
-        public int GetCountOfToppings { get => this.topping.Count;}
-        public Dough Dough
-        {
-            set
-            {
-                this.dough = value;
             }
         }
+        public int GetCountOfToppings { get => this.topping.Count; }        
         
         public void AddTopping(Topping topping)
         {
-            if (GetCountOfToppings > 10)
+            if (GetCountOfToppings >= 10)
                 throw new ArgumentException("Number of toppings should be in range [0..10].");
             this.topping.Add(topping);
         }

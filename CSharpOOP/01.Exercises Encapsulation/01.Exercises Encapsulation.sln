@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1ClassBoxData", "1ClassBoxData\1ClassBoxData.csproj", "{4F04CA67-EADE-423C-9359-A82F277FAD1A}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalFarm", "AnimalFarm\An
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3ShoppingSpree", "3ShoppingSpree\3ShoppingSpree.csproj", "{4345625D-2FBE-4ED9-A9DA-479A444E4BEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4PizzaCalories", "4PizzaCalories\4PizzaCalories.csproj", "{F11FBF5B-D1A4-4A14-9C7F-23BC54B8473D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4PizzaCalories", "4PizzaCalories\4PizzaCalories.csproj", "{F11FBF5B-D1A4-4A14-9C7F-23BC54B8473D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballTeamGenerator", "FootballTeamGenerator\FootballTeamGenerator.csproj", "{742101E7-FFE1-4C3D-9CFC-CE4E59A54702}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F11FBF5B-D1A4-4A14-9C7F-23BC54B8473D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F11FBF5B-D1A4-4A14-9C7F-23BC54B8473D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F11FBF5B-D1A4-4A14-9C7F-23BC54B8473D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742101E7-FFE1-4C3D-9CFC-CE4E59A54702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742101E7-FFE1-4C3D-9CFC-CE4E59A54702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742101E7-FFE1-4C3D-9CFC-CE4E59A54702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742101E7-FFE1-4C3D-9CFC-CE4E59A54702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

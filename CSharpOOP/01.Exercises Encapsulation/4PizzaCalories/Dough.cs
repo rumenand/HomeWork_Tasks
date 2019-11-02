@@ -4,14 +4,17 @@ namespace _4PizzaCalories
 {
     public class Dough
     {
-        private DoughModifiers doughTypes;
+        private const double White = 1.5;
+        private const double Wholegrain = 1;
+        private const double Chewy = 1.1;
+        private const double Crispy = 0.9;
+        private const double Homemade = 1;
         private int weight;
         private double typeModifier;
         private double bakeModifier;
 
         public Dough(string flour, string bakingTech, int weight)
         {
-            doughTypes = new DoughModifiers();
             this.Flour = flour;
             this.BakingTechn = bakingTech;
             this.Weight = weight;            
@@ -21,9 +24,22 @@ namespace _4PizzaCalories
         {            
             set
             {
-                var type = doughTypes.GetTypeValue(value.ToLower());
-                if (type != -1) this.typeModifier = type;
+                var type = GetTypeValue(value);
+                if (type != 0) this.typeModifier = type;
                 else throw new ArgumentException("Invalid type of dough.");                
+            }
+        }
+
+        private double GetTypeValue(string v)
+        {
+            switch(v.ToLower())
+            {
+                case "white": return White;
+                case "wholegrain": return Wholegrain;
+                case "chewy": return Chewy;
+                case "crispy": return Crispy;
+                case "homemade": return Homemade;
+                default: return 0;
             }
         }
 
@@ -31,8 +47,8 @@ namespace _4PizzaCalories
         {
             set
             {
-                var type = doughTypes.GetBakeValue(value.ToLower());
-                if (type != -1) this.bakeModifier = type;
+                var type = GetTypeValue(value);
+                if (type != 0) this.bakeModifier = type;
                 else throw new ArgumentException("Invalid type of dough");
             }
         }
@@ -41,13 +57,13 @@ namespace _4PizzaCalories
         {
             set
             {
-                if (value < 0 || value > 200)
+                if (value < 1 || value > 200)
                     throw new ArgumentException("Dough weight should be in the range [1..200].");
                 this.weight = value;
             }
         }
 
-        public double GetCalories()
+        internal double GetCalories()
         {
             return this.weight * 2*bakeModifier*typeModifier;
         }
