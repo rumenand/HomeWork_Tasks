@@ -2,13 +2,10 @@
 {
     public class Coffee : HotBeverage
     {
-        public Coffee(string name, decimal price, double milliliters) : base(name,price,milliliters)
+        public Coffee(string name, double caffeine) : base(name,3.5m ,50)
         {
-
+            this.Caffeine = caffeine;
         }
         public double Caffeine { get; set; }
-        public double CoffeeMilliliters = 50;
-        public decimal CoffeePrice = 3.50m;
-
     }
 }

@@ -6,25 +6,19 @@ namespace _4PizzaCalories
     {
         static void Main()
         {
-            string input;
-            Pizza pizza =  null;
-            try 
+            try
             {
+                var pizza = Console.ReadLine().Split();
+                var dough = Console.ReadLine().Split();            
+                var doughArgs = Console.ReadLine().Split();
+                var newPizza = new Pizza(pizza[1]);
+                newPizza.Dough = new Dough(dough[1], dough[2], int.Parse(dough[2]));
+                string input;
                 while ((input = Console.ReadLine()) != "END")
                 {
-                    var commands = input.Split();
-                    switch (commands[0])
-                    {
-                        case "Pizza":
-                            var doughArgs = Console.ReadLine().Split();
-                                pizza = new Pizza(commands[1], new Dough(doughArgs[1],doughArgs[2],int.Parse(doughArgs[3])));
-                            
-                            break; 
-                        case "Topping":                           
-                                var topping = new Topping(commands[1], int.Parse(commands[2]));                            
-                                pizza.AddTopping(topping);                             
-                            break;
-                    }
+                    var commands = input.Split();                    
+                    var topping = new Topping(commands[1], int.Parse(commands[2]));                            
+                    newPizza.AddTopping(topping);  
                 }
                 Console.WriteLine(pizza);
             }
