@@ -5,10 +5,10 @@ namespace _4PizzaCalories
     public class Dough
     {
         private const double White = 1.5;
-        private const double Wholegrain = 1;
+        private const double Wholegrain = 1.0;
         private const double Chewy = 1.1;
         private const double Crispy = 0.9;
-        private const double Homemade = 1;
+        private const double Homemade = 1.0;
         private int weight;
         private double typeModifier;
         private double bakeModifier;

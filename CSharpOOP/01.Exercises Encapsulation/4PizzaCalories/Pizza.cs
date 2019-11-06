@@ -21,7 +21,7 @@ namespace _4PizzaCalories
             get => this.name;
             private set
             {
-                if (value.Length > 15 || string.IsNullOrEmpty(value))
+                if (value.Length < 1 || value.Length >15)
                     throw new ArgumentException("Pizza name should be between 1 and 15 symbols.");
                 this.name = value;
             }
@@ -33,19 +33,21 @@ namespace _4PizzaCalories
             {
                 this.dough = value;
             }
-        }
-        public int GetCountOfToppings { get => this.topping.Count; }        
+        }       
         
         public void AddTopping(Topping topping)
         {
-            if (GetCountOfToppings >= 10)
+            if (this.topping.Count == 10)
                 throw new ArgumentException("Number of toppings should be in range [0..10].");
             this.topping.Add(topping);
         }
 
         public double GetCalories()
         {
-            return this.dough.GetCalories() + this.topping.Sum(x=>x.GetCalories());
+            double result = 0;
+            result = this.dough.GetCalories();
+            this.topping.ForEach(x=>result += x.GetCalories());
+            return result;
         }
 
         public override string ToString()
