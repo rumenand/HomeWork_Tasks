@@ -4,6 +4,7 @@ namespace _4PizzaCalories
 {
     public class Topping
     {
+        private const double BaseCaloriesPerGram = 2;
         private const double Meat = 1.2;
         private const double Veggies = 0.8;
         private const double Cheese = 1.1;
@@ -22,15 +23,16 @@ namespace _4PizzaCalories
         {
             get => this.typeName;
             set
-            {
-                this.typeName = value;           
+            {                        
                 this.typeValue = GetTypeOfModifier(value);
                 if (typeValue ==0) throw new ArgumentException($"Cannot place {value} on top of your pizza.");
+                this.typeName = value;
             }
         }        
 
         private int Weight
         {
+            get => this.weight;
             set
             {
                 if (value < 1 || value > 50)
@@ -39,7 +41,7 @@ namespace _4PizzaCalories
             }                
         }
 
-        internal double GetCalories()  => this.weight * 2 * this.typeValue;        
+        public double GetCalories()  => this.Weight * BaseCaloriesPerGram * this.typeValue;        
 
         private double GetTypeOfModifier(string type)
         {

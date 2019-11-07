@@ -21,7 +21,7 @@ namespace _4PizzaCalories
         }
 
         private string Flour
-        {            
+        {
             set
             {
                 var type = GetTypeValue(value);
@@ -55,6 +55,7 @@ namespace _4PizzaCalories
 
         private int Weight
         {
+            get => this.weight;
             set
             {
                 if (value < 1 || value > 200)
@@ -63,7 +64,7 @@ namespace _4PizzaCalories
             }
         }
 
-        internal double GetCalories()
+        public double GetCalories()
         {
             return this.weight * 2*bakeModifier*typeModifier;
         }
