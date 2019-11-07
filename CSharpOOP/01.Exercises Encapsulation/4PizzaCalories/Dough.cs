@@ -49,7 +49,7 @@ namespace _4PizzaCalories
             {
                 var type = GetTypeValue(value);
                 if (type != 0) this.bakeModifier = type;
-                else throw new ArgumentException("Invalid type of dough");
+                else throw new ArgumentException("Invalid type of dough.");
             }
         }
 
