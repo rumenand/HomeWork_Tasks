@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3Ferrari", "3Ferrari\3Ferra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telephony", "Telephony\Telephony.csproj", "{BABF693C-8DDB-4128-933A-D95F3EE1BDD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5BorderControl", "5BorderControl\5BorderControl.csproj", "{D4A12330-E5C8-4F2F-BEFC-955D01D69E5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5BorderControl", "5BorderControl\5BorderControl.csproj", "{D4A12330-E5C8-4F2F-BEFC-955D01D69E5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6BirthdayCelebrations", "6BirthdayCelebrations\6BirthdayCelebrations.csproj", "{FE732998-ADA3-44DC-BD0F-40A9FAFD7367}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6BirthdayCelebrations", "6BirthdayCelebrations\6BirthdayCelebrations.csproj", "{FE732998-ADA3-44DC-BD0F-40A9FAFD7367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7Food Shortage", "7Food Shortage\7Food Shortage.csproj", "{E62806C3-A5DA-44E7-8D29-0501D29EF495}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{FE732998-ADA3-44DC-BD0F-40A9FAFD7367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE732998-ADA3-44DC-BD0F-40A9FAFD7367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE732998-ADA3-44DC-BD0F-40A9FAFD7367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E62806C3-A5DA-44E7-8D29-0501D29EF495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62806C3-A5DA-44E7-8D29-0501D29EF495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62806C3-A5DA-44E7-8D29-0501D29EF495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62806C3-A5DA-44E7-8D29-0501D29EF495}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
