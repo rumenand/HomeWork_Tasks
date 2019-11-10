@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5BorderControl", "5BorderCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6BirthdayCelebrations", "6BirthdayCelebrations\6BirthdayCelebrations.csproj", "{FE732998-ADA3-44DC-BD0F-40A9FAFD7367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7Food Shortage", "7Food Shortage\7Food Shortage.csproj", "{E62806C3-A5DA-44E7-8D29-0501D29EF495}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodShortage", "7Food Shortage\FoodShortage.csproj", "{E62806C3-A5DA-44E7-8D29-0501D29EF495}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
