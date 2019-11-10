@@ -1,7 +1,7 @@
 ﻿
 namespace MilitaryElite
 {
-    public class Soldier : ISolrier
+    public abstract class Soldier : ISolrier
     {
         public Soldier(int id, string firstName, string lastName)
         {
@@ -12,5 +12,10 @@ namespace MilitaryElite
         public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
+
+        public override string ToString()
+        {
+            return $"Name: {this.FirstName} {this.LastName} Id: {this.Id}";
+        }
     }
 }

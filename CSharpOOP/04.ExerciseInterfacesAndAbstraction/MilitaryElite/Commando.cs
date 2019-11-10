@@ -17,7 +17,7 @@ namespace MilitaryElite
         public List<Mission> Missions
         {
             get => this.missions;
-            private set => this.missions = new List<Mission>(value);            
+            private set => this.missions = value;            
         }
 
         public void CompleteMission(Mission mission)
@@ -30,9 +30,17 @@ namespace MilitaryElite
         {
             var data = listOfMissions.ToArray();
             var listSelected = new List<Mission>();
-            for (int i = 0; i < data.Length - 1; i +=2)
+            for (int i = 0; i < data.Length; i +=2)
             {
-                string state = data[i + 1];
+                string state = null;
+                try
+                {
+                    state = data[i + 1];
+                }
+                catch (Exception e)
+                {
+
+                }
                 if (state == "inProgress" || state == "Finished")
                 {
                     listSelected.Add(new Mission(data[i], data[i + 1]));
@@ -44,13 +52,11 @@ namespace MilitaryElite
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append(this.GetName());
-            sb.Append("Missions:");
-            sb.Append(Environment.NewLine);
+            sb.AppendLine(base.ToString());
+            sb.AppendLine("Missions:");
             foreach (var item in Missions)
             {
-                sb.Append($"  {item.ToString()}");
-                sb.Append(Environment.NewLine);
+                sb.AppendLine($"  {item.ToString()}");
             }
             return sb.ToString().Trim();
         }

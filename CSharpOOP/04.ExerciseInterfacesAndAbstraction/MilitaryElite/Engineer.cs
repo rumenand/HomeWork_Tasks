@@ -34,13 +34,11 @@ namespace MilitaryElite
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append(this.GetName());
-            sb.Append("Repairs:");
-            sb.Append(Environment.NewLine);
+            sb.AppendLine(base.ToString());
+            sb.AppendLine("Repairs:");
             foreach (var item in Repairs)
             {
-                sb.Append($"  {item.ToString()}");
-                sb.Append(Environment.NewLine);
+                sb.AppendLine($"  {item.ToString()}");
             }
             return sb.ToString().Trim();
         }

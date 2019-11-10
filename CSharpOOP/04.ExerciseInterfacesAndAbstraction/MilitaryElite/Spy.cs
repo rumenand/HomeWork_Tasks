@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+using System.Text;
+
 namespace MilitaryElite
 {
     public class Spy : Soldier, ISpy
@@ -12,7 +14,10 @@ namespace MilitaryElite
 
         public override string ToString()
         {
-            return $"Name {this.FirstName} {this.LastName} Id: {this.Id} Code Number: {this.CodeNumber}";
+            var sb = new StringBuilder();
+            sb.AppendLine(base.ToString());
+            sb.AppendLine($"Code Number: {this.CodeNumber}");
+            return sb.ToString().Trim();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿
+﻿using System.Text;
+
 namespace MilitaryElite
 {
     public class Private : Soldier, IPrivate
@@ -8,16 +9,14 @@ namespace MilitaryElite
         {
             this.Salary = salary;
         }
-        public decimal Salary { get; private set; }
-
-        public virtual string GetName()
-        {
-            return $"Name: {this.FirstName} {this.LastName} Id: {this.Id} Salary: {this.Salary:F2}";
-        }
+        public decimal Salary { get; private set; }       
 
         public override string ToString()
         {
-            return GetName();
+            var sb = new StringBuilder();
+            sb.Append(base.ToString());
+            sb.Append($" Salary: {this.Salary:F2}");
+            return sb.ToString().Trim();
         }
     }
 }

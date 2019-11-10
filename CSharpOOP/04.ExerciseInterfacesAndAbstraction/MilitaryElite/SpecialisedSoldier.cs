@@ -21,14 +21,12 @@ namespace MilitaryElite
             }
         }
 
-        public override string GetName()
+        public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append(base.GetName());
-            sb.Append(Environment.NewLine);
-            sb.Append($"Corps: {this.Corps}");
-            sb.Append(Environment.NewLine);
-            return sb.ToString();
+            sb.AppendLine(base.ToString());
+            sb.AppendLine($"Corps: {this.Corps}");
+            return sb.ToString().Trim();
         }
 
     }

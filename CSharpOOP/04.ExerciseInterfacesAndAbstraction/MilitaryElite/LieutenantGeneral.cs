@@ -15,10 +15,8 @@ namespace MilitaryElite
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append(this.GetName());
-            sb.Append(Environment.NewLine);
-            sb.Append("Privates:");
-            sb.Append(Environment.NewLine);
+            sb.AppendLine(base.ToString());
+            sb.AppendLine("Privates:");
             foreach (var item in ListPrivates)
             {
                 sb.Append($"  {item.ToString()}");
