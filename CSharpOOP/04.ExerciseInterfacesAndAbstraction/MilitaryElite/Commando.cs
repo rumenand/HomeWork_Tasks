@@ -32,15 +32,8 @@ namespace MilitaryElite
             var listSelected = new List<Mission>();
             for (int i = 0; i < data.Length; i +=2)
             {
-                string state = null;
-                try
-                {
-                    state = data[i + 1];
-                }
-                catch (Exception e)
-                {
-
-                }
+                string state = null;               
+                state = data[i + 1];                
                 if (state == "inProgress" || state == "Finished")
                 {
                     listSelected.Add(new Mission(data[i], data[i + 1]));

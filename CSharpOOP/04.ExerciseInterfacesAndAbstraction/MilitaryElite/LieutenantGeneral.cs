@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace MilitaryElite
 {
@@ -19,8 +17,7 @@ namespace MilitaryElite
             sb.AppendLine("Privates:");
             foreach (var item in ListPrivates)
             {
-                sb.Append($"  {item.ToString()}");
-                sb.Append(Environment.NewLine);
+                sb.AppendLine($"  {item.ToString()}");
             }
             return sb.ToString().Trim();
         }

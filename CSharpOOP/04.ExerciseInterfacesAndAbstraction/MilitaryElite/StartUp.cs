@@ -66,7 +66,7 @@ namespace MilitaryElite
                     var currentPrivate = records.Where(x => x.Id == num && x.GetType().Equals(typeof(Private))).FirstOrDefault();
                     if (currentPrivate != null)
                     {
-                        listOfPrivates.Add(currentPrivate as Private);
+                        listOfPrivates.Add((Private)currentPrivate);
                     }             
             }
             return listOfPrivates.ToArray();
