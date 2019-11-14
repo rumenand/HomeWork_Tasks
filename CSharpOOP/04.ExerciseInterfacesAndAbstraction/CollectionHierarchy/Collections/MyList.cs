@@ -2,21 +2,14 @@
 
 namespace CollectionHierarchy.Collections
 {
-    class MyList : IMyList
+    class MyList : AddRemoveCollection, IMyList
     {
-        private List<string> list = new List<string>();
         public int Used
         {
             get => this.list.Count;
-        }
+        }       
 
-        public int Add(string item)
-        {
-            this.list.Insert(0, item);
-            return 0;
-        }
-
-        public string Remove()
+        public override string Remove()
         {
             string removedItem = null;
             if (this.list.Count > 0)

@@ -4,10 +4,9 @@ using System.Collections.Generic;
 
 namespace CollectionHierarchy.Collections
 {
-    public class AddRemoveCollection : IAddRemoveCollection
+    public class AddRemoveCollection : AddCollection, IAddRemoveCollection
     {
-        private List<string> list = new List<string>();
-        public int Add(string item)
+        public override int Add(string item)
         {
             this.list.Insert(0, item);
             return 0;
