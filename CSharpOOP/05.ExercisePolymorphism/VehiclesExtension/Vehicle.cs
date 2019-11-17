@@ -1,16 +1,22 @@
-﻿
-namespace Vehicles
+﻿using System;
+
+namespace VehiclesExtension
 {
     public abstract class Vehicle
     {
-        public Vehicle(double fuelQuantity, double consumption)
+        public Vehicle(double fuelQuantity, double consumption, double tankFuel)
         {
-            this.FuelQuantity = fuelQuantity;
             this.FuelConsumption = consumption;
+            this.TankCapacity = tankFuel;
+            if (fuelQuantity > tankFuel) this.FuelQuantity = 0;
+            else this.FuelQuantity = fuelQuantity;
         }
         public string Name { get; set; }
-        public double FuelQuantity { get; protected set; }
+        public double FuelQuantity { get; set; }
+
         public double FuelConsumption { get; protected set; }
+
+        public double TankCapacity { get; set; }
 
         protected double AirConditionerConsumtion { get; set; }
 
@@ -22,11 +28,17 @@ namespace Vehicles
             return $"{this.Name} travelled {distance} km";
         }
 
-        public abstract void RefuelTank(double refillAmount);
+        public virtual void RefuelTank(double refillAmount)
+        {
+            if (refillAmount <= 0) throw new ArgumentException("Fuel must be a positive number");
+            if (this.FuelQuantity + refillAmount > this.TankCapacity)
+                throw new ArgumentException($"Cannot fit {refillAmount} fuel in the tank");
+            this.FuelQuantity += refillAmount;
+        }
 
-        private double NeededFuelForDistance(double distance)
+        protected double NeededFuelForDistance(double distance)
         {
             return (this.FuelConsumption + this.AirConditionerConsumtion) * distance;
-        }
+        }        
     }
 }
