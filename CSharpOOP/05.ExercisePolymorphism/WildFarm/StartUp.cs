@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using WildFarm.Animals;
-using WildFarm.Animals.Birds;
-using WildFarm.Animals.Mamals;
-using WildFarm.Animals.Mamals.Felines;
 using WildFarm.Foods;
 
 namespace WildFarm
@@ -14,32 +10,13 @@ namespace WildFarm
         static List<Animal> list = new List<Animal>();
         static void Main()
         {
+            var animalsFactory = new AnimalFactory();
             string input;
             while ((input = Console.ReadLine()) != "End")
             {
                 var tokens = input.Split();
                 Animal currentAnimal = null;
-                switch (tokens[0])
-                {
-                    case "Cat":
-                        currentAnimal = new Cat(tokens[1], double.Parse(tokens[2]), tokens[3], tokens[4]);                                              
-                        break;
-                    case "Tiger":
-                        currentAnimal = new Tiger(tokens[1], double.Parse(tokens[2]), tokens[3], tokens[4]);
-                        break;
-                    case "Dog":
-                        currentAnimal = new Dog(tokens[1], double.Parse(tokens[2]), tokens[3]);
-                        break;
-                    case "Mouse":
-                        currentAnimal = new Mouse(tokens[1], double.Parse(tokens[2]), tokens[3]);
-                        break;
-                    case "Hen":
-                        currentAnimal = new Hen(tokens[1], double.Parse(tokens[2]), double.Parse(tokens[3]));
-                        break;
-                    case "Owl":
-                        currentAnimal = new Owl(tokens[1], double.Parse(tokens[2]), double.Parse(tokens[3]));
-                        break;
-                }
+                currentAnimal = animalsFactory.CreateAnimal(tokens);
                 if (currentAnimal != null)
                 {
                     list.Add(currentAnimal);
