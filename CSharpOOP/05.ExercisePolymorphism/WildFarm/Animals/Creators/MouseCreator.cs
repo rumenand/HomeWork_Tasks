@@ -1,6 +1,7 @@
 ﻿
-namespace WildFarm.Animals.Mamals
+namespace WildFarm.Animals.Creators
 {
+    using WildFarm.Animals.Mamals;
     class MouseCreator : IAnimalCreator
     {
         public Animal Create(string[] args)

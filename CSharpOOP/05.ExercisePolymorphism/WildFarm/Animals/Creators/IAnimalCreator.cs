@@ -1,6 +1,6 @@
 ﻿
 
-namespace WildFarm.Animals
+namespace WildFarm.Animals.Creators
 {
     public interface IAnimalCreator
     {

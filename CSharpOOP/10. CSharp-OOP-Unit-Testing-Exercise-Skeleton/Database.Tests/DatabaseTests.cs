@@ -9,8 +9,7 @@ namespace DatabaseTests
         [SetUp]
         public void Setup()
         {
-            database = new Database(new int[] { 1, 2, 3 });
-            
+            database = new Database(new int[] { 1, 2, 3 });            
         }
 
         [Test]
@@ -23,7 +22,8 @@ namespace DatabaseTests
         public void TestMaxCapacity()
         {
             int maxCapacity = 16;
-            for (int i = 0; i < maxCapacity-3; i++)
+            var initialCount = database.Count;
+            for (int i = 0; i < maxCapacity-initialCount; i++)
             {
                 database.Add(i);
             }
@@ -40,10 +40,16 @@ namespace DatabaseTests
         [Test]
         public void TestRemoveFunctionality()
         {
-            database.Add(1);
             database.Remove();
-            Assert.That(database.Count == 3);
+            Assert.That(database.Count == 2);
         }      
+
+        [Test]
+        public void RemovingFromEmptyCollection()
+        {
+            var emptyData = new Database();
+            Assert.Throws<InvalidOperationException>(() => emptyData.Remove());
+        }
 
         [Test]
         public void TestFetch()

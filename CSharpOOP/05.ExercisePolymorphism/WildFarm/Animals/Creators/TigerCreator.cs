@@ -1,6 +1,7 @@
 ﻿
-namespace WildFarm.Animals.Mamals.Felines
+namespace WildFarm.Animals.Creators
 {
+    using WildFarm.Animals.Mamals.Felines;
     public class TigerCreator : IAnimalCreator
     {
         public Animal Create(string[] args)
