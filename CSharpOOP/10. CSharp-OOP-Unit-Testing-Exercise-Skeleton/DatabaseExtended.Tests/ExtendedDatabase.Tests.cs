@@ -1,8 +1,8 @@
 using NUnit.Framework;
-//using ExtendedDatabase;
+using  ExtendedDatabase;
 using System;
 
-namespace Tests
+namespace ExtendedDatabase.Tests
 {
     public class ExtendedDatabaseTests
     {
@@ -11,9 +11,19 @@ namespace Tests
         public void Setup()
         {
             database = new ExtendedDatabase
-                ( new Person(22,"Pesho"));
+                (new Person(22, "Pesho"));
         }
 
+        [Test]
+        public void CheckCount()
+        {
+            Assert.That(database.Count == 1);
+        }
+        [Test]
+        public void AddingPerson()
+        {
+            Assert.DoesNotThrow(() => database.Add(new Person(20, "Ivo")));
+        }
         [Test]
         public void AddingPersonWithSameId()
         {
@@ -89,6 +99,19 @@ namespace Tests
         {
             Assert.Throws<InvalidOperationException>(()
                  => database.FindById(28));
+        }
+
+        [Test]
+        public void FindingPersonWithExistingId()
+        {
+            var person = database.FindById(22);
+            Assert.That(person.Id == 22);
+        }
+
+        [Test]
+        public void AddingBiggerCollection()
+        {
+            Assert.Throws<ArgumentException>(() => new ExtendedDatabase(new Person[17]));
         }
     }
 }

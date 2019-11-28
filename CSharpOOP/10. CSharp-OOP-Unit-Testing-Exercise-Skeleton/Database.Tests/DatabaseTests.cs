@@ -1,15 +1,15 @@
-using NUnit.Framework;
 using System;
+using NUnit.Framework;
 
-namespace DatabaseTests
+namespace Database.Tests
 {
     public class DatabaseTests
     {
-        private Database database;
+        private global::Database.Database database;
         [SetUp]
         public void Setup()
         {
-            database = new Database(new int[] { 1, 2, 3 });            
+            database = new global::Database.Database (new int[] { 1, 2, 3 });            
         }
 
         [Test]
@@ -47,7 +47,7 @@ namespace DatabaseTests
         [Test]
         public void RemovingFromEmptyCollection()
         {
-            var emptyData = new Database();
+            var emptyData = new global::Database.Database();
             Assert.Throws<InvalidOperationException>(() => emptyData.Remove());
         }
 
@@ -55,7 +55,7 @@ namespace DatabaseTests
         public void TestFetch()
         {
             var copy = database.Fetch();
-            Assert.AreEqual(new int[3] {1,2,3}, copy);            
+            Assert.AreEqual(new int[] {1,2,3}, copy);            
         }
     }
 }
