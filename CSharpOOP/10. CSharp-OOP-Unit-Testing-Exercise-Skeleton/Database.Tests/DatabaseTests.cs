@@ -57,5 +57,7 @@ namespace Database.Tests
             var copy = database.Fetch();
             Assert.AreEqual(new int[] {1,2,3}, copy);            
         }
+
+
     }
 }
