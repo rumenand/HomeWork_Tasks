@@ -1,3 +1,4 @@
+using ExtendedDatabase;
 using NUnit.Framework;
 using System;
 
@@ -5,11 +6,11 @@ namespace Tests
 {
     public class ExtendedDatabaseTests
     {
-        ExtendedDatabase database;
+        ExtendedDatabase.ExtendedDatabase database;
         [SetUp]
         public void Setup()
         {
-            database = new ExtendedDatabase
+            database = new ExtendedDatabase.ExtendedDatabase
                 (new Person(22, "Pesho"));
         }
 
@@ -110,13 +111,13 @@ namespace Tests
         [Test]
         public void AddingBiggerCollection()
         {
-            Assert.Throws<ArgumentException>(() => new ExtendedDatabase(new Person[17]));
+            Assert.Throws<ArgumentException>(() => new ExtendedDatabase.ExtendedDatabase(new Person[17]));
         }
 
         [Test]
         public void InstanceWithEmptyCtor()
         {
-            Assert.DoesNotThrow(() => new ExtendedDatabase());
+            Assert.DoesNotThrow(() => new ExtendedDatabase.ExtendedDatabase());
         }
     }
 }
