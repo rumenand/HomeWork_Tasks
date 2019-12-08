@@ -6,11 +6,7 @@ namespace ViceCity.Models.Guns
         public Rifle(string name) 
             : base(name, 50, 500)
         {
-        }
-
-        public override int Fire()
-        {
-            return 5;
-        }
+            this.bulletsPerShot = 5;
+        }        
     }
 }
