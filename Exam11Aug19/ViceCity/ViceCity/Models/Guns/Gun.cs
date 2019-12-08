@@ -23,7 +23,7 @@ namespace ViceCity.Models.Guns
 
         public int TotalBullets { get; protected set; }
 
-        public bool CanFire => this.TotalBullets>0 || this.currentBullets>this.BulletsPerBarrel;
+        public bool CanFire => this.TotalBullets>0 || this.currentBullets>0;
 
         public abstract int Fire();
 
@@ -33,7 +33,8 @@ namespace ViceCity.Models.Guns
             if (this.TotalBullets > this.BulletsPerBarrel)
             {
                 this.TotalBullets -= BulletsPerBarrel;
-                this.currentBullets = this.TotalBullets;                
+                this.currentBullets = this.TotalBullets;
+                return true;
             }
             this.currentBullets = this.TotalBullets;
             this.TotalBullets = 0;
