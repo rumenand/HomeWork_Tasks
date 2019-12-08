@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System.Linq;
 using System;
+using FightingArena;
 
 namespace Tests
 {
@@ -26,8 +27,16 @@ namespace Tests
             var warrior = new Warrior("a", 10, 10);
             arena.Enroll(warrior);
             Assert.That(arena.Count == 1);
-            Assert.That(arena.Warriors.FirstOrDefault().Name == "a");
-            Assert.Throws<InvalidOperationException>(() => arena.Enroll(warrior));
+            Assert.That(arena.Warriors.FirstOrDefault().Name == "a");           
+        }
+        [Test]
+        public void AddSameWarrior()
+        {
+            var arena = new Arena();
+            var warrior = new Warrior("a", 10, 10);
+            arena.Enroll(warrior);
+            Assert.Throws<InvalidOperationException>(() => arena.Enroll(new Warrior("a",1098,129)));
+            Assert.That(arena.Count == 1);
         }
 
         [Test]

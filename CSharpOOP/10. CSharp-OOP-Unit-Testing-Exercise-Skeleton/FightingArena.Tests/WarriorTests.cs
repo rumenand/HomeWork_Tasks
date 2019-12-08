@@ -1,3 +1,4 @@
+using FightingArena;
 using NUnit.Framework;
 using System;
 

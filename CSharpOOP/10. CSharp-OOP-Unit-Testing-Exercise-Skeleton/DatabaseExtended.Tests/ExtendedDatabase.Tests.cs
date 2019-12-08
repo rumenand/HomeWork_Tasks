@@ -39,7 +39,7 @@ namespace Tests
         }
 
         [Test]
-        public void AddingOverTheCapacityOfDatabase()
+        public void ShouldThrowInvalidOperationExceptionWhenTryingToAddMoreThan16Peoplå()
         {
             int maxCapacity = 16;
             int currentCount = database.Count;
@@ -88,6 +88,13 @@ namespace Tests
         }
 
         [Test]
+        public void FindingPersonWithExistingNameWrongCase()
+        {
+            Assert.Throws<InvalidOperationException>(() 
+                => database.FindByUsername("pesho"));
+        }
+
+        [Test]
         public void FindingPersonWithNegativeId()
         {
             Assert.Throws<ArgumentOutOfRangeException>(()
@@ -118,6 +125,16 @@ namespace Tests
         public void InstanceWithEmptyCtor()
         {
             Assert.DoesNotThrow(() => new ExtendedDatabase.ExtendedDatabase());
+        }
+
+        [Test]
+        public void InstanceWithCollectionOfPeople()
+        {
+            var firstPerson = new Person(111L, "First");
+            var secondPerson = new Person(222L, "Second");
+            var collectionOfPeople = new Person[] { firstPerson, secondPerson };
+            this.database = new ExtendedDatabase.ExtendedDatabase(collectionOfPeople);
+            Assert.That(this.database.Count == 2);
         }
     }
 }
