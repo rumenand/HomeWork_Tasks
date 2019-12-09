@@ -37,15 +37,18 @@ namespace ViceCity.Core
         public string AddGunToPlayer(string name)
         {
             if (guns.Count == 0) return "There are no guns in the queue!";
-            var currentGun = this.guns.Dequeue();
+            var currentGun = this.guns.Peek();
             if (name == "Vercetti")
             {                
-                mainPlayer.GunRepository.Add(currentGun);
+                mainPlayer.GunRepository.Add(guns.Dequeue());
                 return $"Successfully added {currentGun.Name} to the Main Player: Tommy Vercetti";                
             }
             var currentCivil = this.civilPlayers.Where(x => x.Name == name).FirstOrDefault();
-            if (currentCivil == null) return "Civil player with that name doesn't exists!";
-            currentCivil.GunRepository.Add(currentGun);
+            if (currentCivil == null)
+            {
+                return "Civil player with that name doesn't exists!";
+            }
+            currentCivil.GunRepository.Add(this.guns.Dequeue());
             return $"Successfully added {currentGun.Name} to the Civil Player: {name}";
         }
 

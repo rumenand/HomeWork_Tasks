@@ -17,7 +17,6 @@ namespace ViceCity.Models.Guns
             this.BulletsPerBarrel = bulletsPerBarrel;
             if (totalBullets < 0) throw new ArgumentException("Total bullets cannot be below zero!");
             this.TotalBullets = totalBullets;
-            this.Reload();
         }
         public string Name { get; }
 
@@ -25,26 +24,26 @@ namespace ViceCity.Models.Guns
 
         public int TotalBullets { get; protected set; }
 
-        public bool CanFire => this.TotalBullets>bulletsPerShot || this.currentBullets>bulletsPerShot;
+        public bool CanFire => this.TotalBullets>bulletsPerShot || this.currentBullets>=bulletsPerShot;
 
         public int Fire()
         {
             if (this.currentBullets >= bulletsPerShot)
             {
-                this.currentBullets -= bulletsPerShot;
+                this.currentBullets -= bulletsPerShot;               
                 return bulletsPerShot;
             }
-            else if (this.Reload()) this.Fire();
+            else if (this.Reload()) return this.Fire();
             return 0;
         }
 
         protected bool Reload()
         {
-            if (!this.CanFire) return false;
+            if (this.TotalBullets == 0) return false;
             if (this.TotalBullets > this.BulletsPerBarrel)
             {
                 this.TotalBullets -= BulletsPerBarrel;
-                this.currentBullets = this.TotalBullets;
+                this.currentBullets = this.BulletsPerBarrel;
                 return true;
             }
             this.currentBullets = this.TotalBullets;
