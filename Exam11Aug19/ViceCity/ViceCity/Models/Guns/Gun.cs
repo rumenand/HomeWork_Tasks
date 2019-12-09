@@ -5,9 +5,9 @@ namespace ViceCity.Models.Guns
 {
     public abstract class Gun : IGun
     {
-        private
         protected int bulletsPerShot;
-        protected int currentBullets;
+        private int currentBullets;
+
         protected Gun(string name, int bulletsPerBarrel, int totalBullets)
         {
             this.currentBullets = 0;
@@ -24,7 +24,7 @@ namespace ViceCity.Models.Guns
 
         public int TotalBullets { get; protected set; }
 
-        public bool CanFire => this.TotalBullets>bulletsPerShot || this.currentBullets>=bulletsPerShot;
+        public bool CanFire => this.currentBullets+this.TotalBullets>=bulletsPerShot;
 
         public int Fire()
         {
