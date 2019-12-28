@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "1. String Length", "1. String Length\1. String Length.njsproj", "{7116ECCF-21B2-4492-8E9C-EF520CD3CCC1}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "2. Math Operations", "2. Math Operations\2. Math Operations.njsproj", "{FF6A88A6-AD2F-4DD7-A0A9-EA3A5F933F1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7116ECCF-21B2-4492-8E9C-EF520CD3CCC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7116ECCF-21B2-4492-8E9C-EF520CD3CCC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7116ECCF-21B2-4492-8E9C-EF520CD3CCC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6A88A6-AD2F-4DD7-A0A9-EA3A5F933F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6A88A6-AD2F-4DD7-A0A9-EA3A5F933F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6A88A6-AD2F-4DD7-A0A9-EA3A5F933F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6A88A6-AD2F-4DD7-A0A9-EA3A5F933F1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
