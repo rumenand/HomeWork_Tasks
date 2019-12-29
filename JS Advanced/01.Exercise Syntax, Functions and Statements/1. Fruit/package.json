@@ -1,0 +1,9 @@
+{
+  "name": "1.-fruit",
+  "version": "0.0.0",
+  "description": "1. Fruit",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
