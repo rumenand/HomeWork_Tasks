@@ -1,0 +1,9 @@
+{
+  "name": "2.-greatest-common-divisor---gcd",
+  "version": "0.0.0",
+  "description": "2. Greatest Common Divisor - GCD",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
