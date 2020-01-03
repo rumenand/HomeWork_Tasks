@@ -1,5 +1,4 @@
 'use strict';
-
 function solve(json) {
     let arr = JSON.parse(json);
     let outputArr = ["<table>"];

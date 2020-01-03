@@ -1,0 +1,9 @@
+{
+  "name": "3.-from-json-to-html-table",
+  "version": "0.0.0",
+  "description": "3. From JSON to HTML Table",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

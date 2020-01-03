@@ -7,6 +7,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "1. Towns to JSON", "1. Town
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "2. Score to HTML", "2. Score to HTML\2. Score to HTML.njsproj", "{7E8C1FAF-0650-4E12-B48C-5B8B3C109007}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "3. From JSON to HTML Table", "3. From JSON to HTML Table\3. From JSON to HTML Table.njsproj", "{E004CDB6-0634-49EB-947B-FD72B62759B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7E8C1FAF-0650-4E12-B48C-5B8B3C109007}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E8C1FAF-0650-4E12-B48C-5B8B3C109007}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E8C1FAF-0650-4E12-B48C-5B8B3C109007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E004CDB6-0634-49EB-947B-FD72B62759B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E004CDB6-0634-49EB-947B-FD72B62759B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E004CDB6-0634-49EB-947B-FD72B62759B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E004CDB6-0634-49EB-947B-FD72B62759B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
