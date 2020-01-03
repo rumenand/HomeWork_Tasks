@@ -1,0 +1,9 @@
+﻿{
+  "name": "2.-json-s-table",
+  "version": "0.0.0",
+  "description": "2. JSON’s Table",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

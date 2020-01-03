@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "1.  Heroic Inventory", "1.  Heroic Inventory\1.  Heroic Inventory.njsproj", "{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "2. JSON’s Table", "2. JSON’s Table\2. JSON’s Table.njsproj", "{495695F2-5DF1-4EE9-A1BF-1997CAF02A19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495695F2-5DF1-4EE9-A1BF-1997CAF02A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495695F2-5DF1-4EE9-A1BF-1997CAF02A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495695F2-5DF1-4EE9-A1BF-1997CAF02A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495695F2-5DF1-4EE9-A1BF-1997CAF02A19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
