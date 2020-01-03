@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "1.  Heroic Inventory", "1.  Heroic Inventory\1.  Heroic Inventory.njsproj", "{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7185F09D-6D8A-4B96-B58B-7D3A21FA0344}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDD9D7AB-4C04-498B-9B39-9AD2D1A58466}
+	EndGlobalSection
+EndGlobal
