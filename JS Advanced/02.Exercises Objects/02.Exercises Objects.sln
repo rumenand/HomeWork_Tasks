@@ -9,6 +9,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "2. JSON’s Table", "2. JSO
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "3. Cappy Juice", "3. Cappy Juice\3. Cappy Juice.njsproj", "{D68300D3-F455-462A-BFA2-FA17ECB78ED8}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "4. Store Catalogue", "4. Store Catalogue\4. Store Catalogue.njsproj", "{484E8066-9DA8-4A59-A28A-8F406BC12246}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D68300D3-F455-462A-BFA2-FA17ECB78ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D68300D3-F455-462A-BFA2-FA17ECB78ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D68300D3-F455-462A-BFA2-FA17ECB78ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{484E8066-9DA8-4A59-A28A-8F406BC12246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{484E8066-9DA8-4A59-A28A-8F406BC12246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{484E8066-9DA8-4A59-A28A-8F406BC12246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{484E8066-9DA8-4A59-A28A-8F406BC12246}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

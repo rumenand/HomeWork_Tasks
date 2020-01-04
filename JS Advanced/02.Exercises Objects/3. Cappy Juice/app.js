@@ -1,27 +1,19 @@
 'use strict';
 function solve(a){
-    let quant = {};
-    let all = {};
-    for (const row of a) {
-        let cur = getQuantity(row.split(" => "));
-        while (quant[cur] >= 1000)  makeBottles(cur);        
-    }
+    var all = {};
+    let q = a.map(x => x.split(" => ")).reduce((acc, cur) => {
+        if (cur[0] in acc) acc[cur[0]] += Number(cur[1]);
+        else acc[cur[0]] = Number(cur[1]);
+        while (acc[cur[0]] >= 1000) {
+            if (cur[0] in all) all[cur[0]] += 1;
+            else all[cur[0]] = 1;
+            acc[cur[0]] -= 1000;
+        }
+        return acc;
+    }, {});       
+    
     for (const key in all) {
         console.log(`${key} => ${all[key]}`);
-    }
-
-    function getQuantity(b) {
-        let x = b[0];
-        if (x in quant) quant[x] += Number(b[1]);
-        else quant[x] = Number(b[1]);
-        return x;
-    }
-    function makeBottles(c) {
-        if (c in all) {
-            all[c] += 1;
-        }
-        else all[c] = 1;
-        quant[c] -= 1000;
     }
 }
 
