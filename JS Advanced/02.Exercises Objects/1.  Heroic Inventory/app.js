@@ -9,9 +9,7 @@ function solve(a) {
                 items: (!row[2]) ? [] : customSpliter(row[2], ', ')
             }
         });
-
     console.log(JSON.stringify(heroes));
-
     function customSpliter(a,sp) {
         return a.split(sp).filter((x) => x != "").map((x) => x.trim());
     }
