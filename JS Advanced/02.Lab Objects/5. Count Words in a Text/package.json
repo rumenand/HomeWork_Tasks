@@ -1,0 +1,9 @@
+{
+  "name": "5.-count-words-in-a-text",
+  "version": "0.0.0",
+  "description": "5. Count Words in a Text",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

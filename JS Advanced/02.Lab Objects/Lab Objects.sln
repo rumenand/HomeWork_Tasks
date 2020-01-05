@@ -11,6 +11,10 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "3. From JSON to HTML Table"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "4. Sum by Town", "4. Sum by Town\4. Sum by Town.njsproj", "{A0C41DBF-D215-4ECB-8BA3-46ACC8C59525}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "9. Extract Unique Words", "9. Extract Unique Words\9. Extract Unique Words.njsproj", "{1440B741-F19D-49D8-947A-08EA847BDAA3}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "5. Count Words in a Text", "5. Count Words in a Text\5. Count Words in a Text.njsproj", "{2C86859F-B82E-4F5E-B624-3B5E1E4D8403}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{A0C41DBF-D215-4ECB-8BA3-46ACC8C59525}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0C41DBF-D215-4ECB-8BA3-46ACC8C59525}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0C41DBF-D215-4ECB-8BA3-46ACC8C59525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1440B741-F19D-49D8-947A-08EA847BDAA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1440B741-F19D-49D8-947A-08EA847BDAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1440B741-F19D-49D8-947A-08EA847BDAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1440B741-F19D-49D8-947A-08EA847BDAA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C86859F-B82E-4F5E-B624-3B5E1E4D8403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C86859F-B82E-4F5E-B624-3B5E1E4D8403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C86859F-B82E-4F5E-B624-3B5E1E4D8403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C86859F-B82E-4F5E-B624-3B5E1E4D8403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
