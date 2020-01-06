@@ -21,16 +21,12 @@ function solve(a) {
         return acc;
     }, {});   
 
-    let e = "";
-    for (const car in prod) {
-        if (e != car) {
-            e = car;
-            console.log(e);
-            for (const mod in prod[e]) {
-                console.log(`###${prod[e][mod].model} -> ${prod[e][mod].prod}`);
+    for (const car in prod) {     
+            console.log(car);
+            for (const mod in prod[car]) {
+                console.log(`###${prod[car][mod].model} -> ${prod[car][mod].prod}`);
             }
         }        
-    }
 }
 
 solve(['Audi | Q7 | 1000',
