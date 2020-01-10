@@ -1,0 +1,9 @@
+{
+  "name": "5.-last-k-numbers-sequence",
+  "version": "0.0.0",
+  "description": "5. Last K Numbers Sequence",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

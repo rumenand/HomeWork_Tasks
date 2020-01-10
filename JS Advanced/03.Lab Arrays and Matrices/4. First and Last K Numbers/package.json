@@ -1,0 +1,9 @@
+{
+  "name": "4.-first-and-last-k-numbers",
+  "version": "0.0.0",
+  "description": "4. First and Last K Numbers",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
