@@ -1,0 +1,9 @@
+{
+  "name": "1.-print-an-array-with-a-given-delimiter",
+  "version": "0.0.0",
+  "description": "1. Print an Array with a given Delimiter",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

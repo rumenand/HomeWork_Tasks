@@ -1,0 +1,9 @@
+{
+  "name": "2.-print-every-n-th-element-from-an-array",
+  "version": "0.0.0",
+  "description": "2. Print every N-th Element from an Array",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

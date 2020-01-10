@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "1. Print an Array with a given Delimiter", "1. Print an Array with a given Delimiter\1. Print an Array with a given Delimiter.njsproj", "{52C17910-BA5D-47C5-881D-8F70153DA62D}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "2. Print every N-th Element from an Array", "2. Print every N-th Element from an Array\2. Print every N-th Element from an Array.njsproj", "{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52C17910-BA5D-47C5-881D-8F70153DA62D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C17910-BA5D-47C5-881D-8F70153DA62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C17910-BA5D-47C5-881D-8F70153DA62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C17910-BA5D-47C5-881D-8F70153DA62D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96A128FF-A326-4747-B0D8-F5909778E7FA}
+	EndGlobalSection
+EndGlobal
