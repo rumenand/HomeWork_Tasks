@@ -1,8 +1,9 @@
 function solve(data) {
-    let rot = data.pop();
-    for (let i = 0; i < rot; i++) {
-        data.unshift(data.pop());
-    }
-    console.log(data.join(" "));
+    let arr = data.reduce((a, b, i) => {
+        if (b === 'add') a.push(i + 1);
+        else if (b === 'remove') a.pop();
+        return a;
+    }, [])
+    console.log((arr.length > 0) ? arr.join("\n") : "Empty");
 }
-solve([1,2,3,4,2]);
+solve(['add','add','add','add']);
