@@ -1,0 +1,9 @@
+{
+  "name": "5.extract-an-non-decreasing-subsequence-from-an-array",
+  "version": "0.0.0",
+  "description": "5.Extract an Non-decreasing Subsequence from an Array",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

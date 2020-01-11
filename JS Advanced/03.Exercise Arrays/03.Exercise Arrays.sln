@@ -11,6 +11,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "3. Add and Remove Elements 
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "4.   Rotate Array", "4.   Rotate Array\4.   Rotate Array.njsproj", "{BA520947-B2DF-43F1-8313-9E91D6312BAD}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "5.Extract an Non-decreasing Subsequence from an Array", "5.Extract an Non-decreasing Subsequence from an Array\5.Extract an Non-decreasing Subsequence from an Array.njsproj", "{295EA693-A781-485A-97B0-F0E2AA739405}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BA520947-B2DF-43F1-8313-9E91D6312BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA520947-B2DF-43F1-8313-9E91D6312BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA520947-B2DF-43F1-8313-9E91D6312BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{295EA693-A781-485A-97B0-F0E2AA739405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{295EA693-A781-485A-97B0-F0E2AA739405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{295EA693-A781-485A-97B0-F0E2AA739405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{295EA693-A781-485A-97B0-F0E2AA739405}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
