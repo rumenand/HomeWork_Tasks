@@ -13,6 +13,10 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "4.   Rotate Array", "4.   R
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "5.Extract an Non-decreasing Subsequence from an Array", "5.Extract an Non-decreasing Subsequence from an Array\5.Extract an Non-decreasing Subsequence from an Array.njsproj", "{295EA693-A781-485A-97B0-F0E2AA739405}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "6. Sort an Array by 2 Criteria", "6. Sort an Array by 2 Criteria\6. Sort an Array by 2 Criteria.njsproj", "{98FEDE1B-6980-41E1-A58A-DE9A055CB5F1}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "7. Magic Matrices", "7. Magic Matrices\7. Magic Matrices.njsproj", "{217AAA6B-7A7B-4626-9CC3-8946A4E4852B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{295EA693-A781-485A-97B0-F0E2AA739405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{295EA693-A781-485A-97B0-F0E2AA739405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{295EA693-A781-485A-97B0-F0E2AA739405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FEDE1B-6980-41E1-A58A-DE9A055CB5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FEDE1B-6980-41E1-A58A-DE9A055CB5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FEDE1B-6980-41E1-A58A-DE9A055CB5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FEDE1B-6980-41E1-A58A-DE9A055CB5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217AAA6B-7A7B-4626-9CC3-8946A4E4852B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217AAA6B-7A7B-4626-9CC3-8946A4E4852B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217AAA6B-7A7B-4626-9CC3-8946A4E4852B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217AAA6B-7A7B-4626-9CC3-8946A4E4852B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
