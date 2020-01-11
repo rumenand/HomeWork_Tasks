@@ -7,6 +7,10 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "1. Print an Array with a gi
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "2. Print every N-th Element from an Array", "2. Print every N-th Element from an Array\2. Print every N-th Element from an Array.njsproj", "{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "3. Add and Remove Elements from Array", "3. Add and Remove Elements from Array\3. Add and Remove Elements from Array.njsproj", "{3F8DA4B6-3F63-4230-A49F-43866D91FB11}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "4.   Rotate Array", "4.   Rotate Array\4.   Rotate Array.njsproj", "{BA520947-B2DF-43F1-8313-9E91D6312BAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15D5CB0D-5D07-475A-973F-60E8A4A74EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8DA4B6-3F63-4230-A49F-43866D91FB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8DA4B6-3F63-4230-A49F-43866D91FB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8DA4B6-3F63-4230-A49F-43866D91FB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8DA4B6-3F63-4230-A49F-43866D91FB11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA520947-B2DF-43F1-8313-9E91D6312BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA520947-B2DF-43F1-8313-9E91D6312BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA520947-B2DF-43F1-8313-9E91D6312BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA520947-B2DF-43F1-8313-9E91D6312BAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
