@@ -1,13 +1,8 @@
 function solve(x, y) {
-    let forPrint = spiral(getMatrix(x,y));
     let route = spiral(getMatrix(x,y)).reduce((a,b,i) => {
         a[b-1] = i+1;
         return a;
     },[]);
-    matrix = [];
-    for(const i in forPrint){
-        if (forPrint[i]) matrix[forPrint[i]-1] = Number(i)+1;
-    }
     for (let i = 0; i < x; i++) {
         console.log(route.slice(i*x,i*x+y).join(" "));
     }   
@@ -23,14 +18,11 @@ function solve(x, y) {
         }
         return arr;
     }
-    function getMatrix(x, y) {
-        let matrix = Array.from(Array(x), () => new Array(y));   
-        for (let i in matrix) {
-            for (let j = 0; j < y; j++) {
-                matrix[i][j] = i*y+j+1;
-            }
-        }
-        return matrix;
+    function getMatrix(a, b) {
+        return Array.from(Array(a), () => new Array(b)).map((x,i) => {
+            for (let j = 0; j < b; j++)  x[j] = i*b+j+1;
+            return x;
+        });   
     }
 }
 solve(3,3);
