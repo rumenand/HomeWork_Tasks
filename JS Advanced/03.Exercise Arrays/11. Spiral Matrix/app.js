@@ -1,13 +1,15 @@
 function solve(x, y) {
-    let matrix = getMatrix(x,y);
-    let forPrint = spiral(matrix);
+    let forPrint = spiral(getMatrix(x,y));
+    let route = spiral(getMatrix(x,y)).reduce((a,b,i) => {
+        a[b-1] = i+1;
+        return a;
+    },[]);
     matrix = [];
     for(const i in forPrint){
         if (forPrint[i]) matrix[forPrint[i]-1] = Number(i)+1;
     }
-    let num = 0;
     for (let i = 0; i < x; i++) {
-        console.log(matrix.slice(i*x,i*x+y).join(" "));
+        console.log(route.slice(i*x,i*x+y).join(" "));
     }   
     function spiral(matrix) {
         const arr = [];        
@@ -22,15 +24,11 @@ function solve(x, y) {
         return arr;
     }
     function getMatrix(x, y) {
-        let matrix = [];
-        let num = 1;
-        for (let i = 0; i < x; i++) {
-            let row = [];
+        let matrix = Array.from(Array(x), () => new Array(y));   
+        for (let i in matrix) {
             for (let j = 0; j < y; j++) {
-                row.push(num);
-                num++;
+                matrix[i][j] = i*y+j+1;
             }
-            matrix.push(row);
         }
         return matrix;
     }
