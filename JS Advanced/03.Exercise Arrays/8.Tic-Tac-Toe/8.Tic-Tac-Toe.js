@@ -1,11 +1,11 @@
 function solve(moves){
-    const chWinner = (p,board) =>
-        (getResult(board[0],p) || getResult(board[1],p) || getResult(board[2],p)
-        || getResult(board.map(x => x[0]),p)
-        || getResult(board.map(x => x[1]),p)
-        || getResult(board.map(x => x[2]),p)
-        || getResult(board.map((x,i) => x[i]),p)
-        || getResult(board.map((x,i) => x[board.length-1-i]),p))
+    const chWinner = (p,b,f) =>
+        (f(b[0],p) || f(b[1],p) || f(b[2],p)
+        || f(b.map(x => x[0]),p)
+        || f(b.map(x => x[1]),p)
+        || f(b.map(x => x[2]),p)
+        || f(b.map((x,i) => x[i]),p)
+        || f(b.map((x,i) => x[b.length-1-i]),p))
         ?  true :  false;
     const initBoard = () => Array.from(Array(3), () => new Array(false,false,false));
     const hasMove = (a) => a.some(row => row.some(x=>x ===false));
@@ -17,12 +17,12 @@ function solve(moves){
     while(hasMove(board) && moves.length)
     {
         let cMove = moves.shift().split(" ");
-        if (board[cMove[0]][cMove[1]] === false) board[cMove[0]][cMove[1]] = curPl;
+        if (!board[cMove[0]][cMove[1]]) board[cMove[0]][cMove[1]] = curPl;
         else {
             console.log("This place is already taken. Please choose another!");
             continue;
         }
-        if (chWinner(curPl,board)) {
+        if (chWinner(curPl,board,getResult)) {
             winner = curPl;
             break;
         }

@@ -15,8 +15,7 @@ function solve(data){
     },[]);
     let fDiag = getSum(matrix.map((x,i) => x[i]));
     let sDiag = getSum(matrix.map((x,i) => x[matrix.length-1-i]));
-    if (fDiag === sDiag) matrix = modifyMatrix(matrix,fDiag);
-    printMatrix(matrix);
+    printMatrix((fDiag === sDiag) ? modifyMatrix(matrix,fDiag) : matrix);
 }
 solve(['5 3 12 3 1',
 '11 4 23 2 5',
