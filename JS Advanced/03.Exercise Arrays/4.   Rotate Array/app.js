@@ -1,5 +1,5 @@
 function solve(data) {
-    let rot = data.pop();
+    let rot = Number(data.pop())% data.length;
     for (let i = 0; i < rot; i++) {
         data.unshift(data.pop());
     }

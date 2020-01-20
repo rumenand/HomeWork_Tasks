@@ -1,6 +1,6 @@
 function solve(a,b){
-    let sorter = filter();
-    console.log(sorter[b](a));
+    //let sorter = filter();
+    return filter()[b](a);
     function filter()
     {
     return {
@@ -9,4 +9,4 @@ function solve(a,b){
         }
     }
 }
-solve([14, 7, 17, 6, 8], 'desc');
+console.log(solve([14, 7, 17, 6, 8], 'desc'));
