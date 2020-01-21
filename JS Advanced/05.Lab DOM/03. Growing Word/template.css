@@ -42,7 +42,7 @@ input[type="button"], button {
 #redDiv {
     display: inline-block;
     width: 30%;
-    background-color: #A40014;
+    background-color: rgb(194, 173, 176);
     color: white;
 }
 
