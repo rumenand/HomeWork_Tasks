@@ -1,50 +1,52 @@
 function solve(data) {
     var gladiators = {};
-    for (const row of data) {
+    while(data) {
+        let row = data.shift();
         if (row === 'Ave Cesar') break;
-        if (row.includes(" -> ")) addGladiator(row);
-        else if (row.includes(" vs ")) fightGladiator(row)
+        if (row.includes(" -> ")) addGladiator(row,gladiators);
+        else if (row.includes(" vs ")) fightGladiator(row,gladiators)
     }
     let sorted = Object.keys(gladiators).sort((a, b) => {
         let result = getTotalPoints(gladiators[b]) - getTotalPoints(gladiators[a]);
-        if (result == 0) result = a.localeCompare(b);
+        if (result === 0) result = a.localeCompare(b);
         return result;
     });
-    for (const i in sorted) {
-        console.log(`${sorted[i]}: ${getTotalPoints(gladiators[sorted[i]])} skill`);
-        let skillSorted = Object.keys(gladiators[sorted[i]]).sort((a, b) => {
-            let result = gladiators[sorted[i]][b] - gladiators[sorted[i]][a];
-            if (result == 0) result = a.localeCompare(b);
-            return result;
-        });
-        for (const j in skillSorted) {
-            console.log(`- ${skillSorted[j]} <!> ${gladiators[sorted[i]][skillSorted[j]]}`);            
-        } 
-    }    
-    function addGladiator(row) {
+    sorted.map(x => {
+        console.log(`${x}: ${getTotalPoints(gladiators[x])} skill`);
+        getSortedSkills(gladiators[x]).map(y => {
+            console.log(`- ${y} <!> ${gladiators[x][y]}`);            
+        }) 
+    });       
+    function addGladiator(row,a) {
         let [glad, tech, skill] = row.split(" -> ");
-        if (!gladiators.hasOwnProperty(glad)) gladiators[glad] = {};
-        if (gladiators[glad].hasOwnProperty(tech)) {
-            if (gladiators[glad][tech] < Number(skill))
-                gladiators[glad][tech] = Number(skill);
+        if (!a.hasOwnProperty(glad)) a[glad] = {};
+        if (a[glad].hasOwnProperty(tech)) {
+            if (a[glad][tech] < Number(skill))
+                a[glad][tech] = Number(skill);
         }
-        else gladiators[glad][tech] = Number(skill);
+        else a[glad][tech] = Number(skill);
     }
-    function fightGladiator(row) {
+    function fightGladiator(row,a) {
         let [glad1, glad2] = row.split(" vs ");
-        if (gladiators.hasOwnProperty(glad1) && gladiators.hasOwnProperty(glad2)) {
-            for (const tech in gladiators[glad1]) {
-                if (gladiators[glad2].hasOwnProperty(tech)) {
-                    if (getTotalPoints(gladiators[glad1]) < getTotalPoints(gladiators[glad2]))
-                        delete gladiators[glad1];
-                    else if (getTotalPoints(gladiators[glad1]) > getTotalPoints(gladiators[glad2]))
-                        delete gladiators[glad2];
+        if (a.hasOwnProperty(glad1) && a.hasOwnProperty(glad2)) {
+           for (const tech in a[glad1]) {
+                if (a[glad2][tech]) {
+                  if (getTotalPoints(a[glad1]) > getTotalPoints(a[glad2])) delete a[glad2];
+                  else if (getTotalPoints(a[glad1]) < getTotalPoints(a[glad2])) delete a[glad1];
+                  break;
                 }
-            }
+            }           
         }
     }    
     function getTotalPoints(glad) {
         return Object.keys(glad).reduce((a, b) => a + glad[b], 0);
+    }
+    function getSortedSkills(c){
+        return Object.keys(c).sort((a, b) => {
+            let result = c[b] - c[a];
+            if (result === 0) result = a.localeCompare(b);
+            return result;
+        });
     }
 }
 
