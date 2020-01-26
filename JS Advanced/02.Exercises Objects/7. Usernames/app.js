@@ -1,8 +1,6 @@
 function solve(data) {
     console.log([...new Set(data)].sort((a, b) => {
-        let result = a.length - b.length;
-        if (result == 0) result = a.localeCompare(b);
-        return result;
+        return a.length - b.length || a.localeCompare(b);
     }).join("\n"));
 }
 
