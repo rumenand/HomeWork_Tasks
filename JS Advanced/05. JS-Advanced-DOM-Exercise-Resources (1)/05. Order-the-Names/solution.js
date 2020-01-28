@@ -14,5 +14,5 @@ function solve() {
         if (!names.hasOwnProperty(k))names[k] = [];
         names[k].push(name);
         list[k].textContent = names[k].join(", ");
-    }   
+    } 
 }
