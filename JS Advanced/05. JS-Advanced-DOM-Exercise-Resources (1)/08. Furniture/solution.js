@@ -7,8 +7,7 @@ function solve() {
 .map(x=>x.addEventListener('click',(e) => handlerMap[e.target.innerHTML]()));
 
 const txtAreas = document.querySelectorAll('textarea');
-txtAreas[0].value = '[{"name": "Sofa", "img": "https://res.cloudinary.com/maisonsdumonde/image/upload/q_auto,f_auto/w_200/img/grey-3-seater-sofa-bed-200-13-0-175521_9.jpg", "price": 150, "decFactor": 1.2}]';
-let tableBody = document.querySelector("#exercise > div > div > div > div > table > tbody");
+const tBody = document.querySelector("tbody");
 
 function addFrn(){  
   let obj = JSON.parse(txtAreas[0].value);
@@ -20,8 +19,7 @@ function addFrn(){
    newRow.appendChild(crElem(x.decFactor,'p'));
    newRow.appendChild(crElem(null,'input'));
    return newRow;
- });
- const tBody = document.querySelector("tbody");
+ }); 
  rows.map(x=>tBody.appendChild(x));
 }
 function crElem(x,y){
@@ -34,9 +32,9 @@ function crElem(x,y){
   return el;
 }
 function chOut() {
-  let output = document.querySelector("#exercise > textarea:nth-child(5)");
+  let output = document.querySelectorAll("#exercise textarea")[1];
   let bought = [...document.querySelectorAll('input')].reduce((a,b,i)=> {
-    if (b.checked === true) a.push(tableBody.children[i]);
+    if (b.checked === true) a.push(tBody.children[i]);
     return a;
   },[]);
   let names = bought.map(x=>x.children[1].textContent);
