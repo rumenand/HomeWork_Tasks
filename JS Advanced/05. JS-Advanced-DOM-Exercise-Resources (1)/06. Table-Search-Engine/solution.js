@@ -1,20 +1,20 @@
 function solve() {
-   const tBodyEl = document.querySelectorAll('tbody tr');
-   const table = [...tBodyEl]
-                .reduce((a,b,i) => {
-                a.push(b.innerText);
-                return a},[]);
-   document.getElementById('searchBtn').addEventListener('click',handler);
-   const sText = document.getElementById('searchField');     
-
-   function handler(e){    
-   [...tBodyEl].map(x=>x.classList ='');
-   [...tBodyEl].forEach(e => {
-        const text = e.textContent;
-        if (text.includes(sText.value) && sText.value !== '') {
-          e.className = 'select';
-    }
-   });
-   sText.value = '';
-   }
+   let searchButton = document.querySelector("#searchBtn");
+   searchButton.addEventListener("click", handler);
+   function handler(e){
+      Array.from(document.querySelectorAll(".select")).map(x => x.remove());
+      let allRows = document.querySelectorAll("body > table > tbody>tr");
+      let inputField = document.querySelector("#searchField").value.toLowerCase();
+ 
+      for (const element of allRows) {
+         let elementChildren = element.children;
+         for (const child of elementChildren) {
+            let currCellValue = (child.textContent).toLowerCase();
+            if (inputField !='' && currCellValue.includes(inputField)) {
+               element.className = 'select';
+            }
+         }
+      }
+      document.querySelector("#searchField").value = '';
+   };
 }
