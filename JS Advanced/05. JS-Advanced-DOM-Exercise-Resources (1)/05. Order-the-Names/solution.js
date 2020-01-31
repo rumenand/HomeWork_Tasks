@@ -1,18 +1,18 @@
 function solve() {
-    let addBtn = document.querySelector('button');
-    let textIpt = document.querySelector('input');    
-    addBtn.addEventListener('click',hadler);
-    let names = {
-        13:['Nixon'],
-        15:['Peterson']
-    }
-
-    function hadler(e){
-        const name = textIpt.value.charAt(0).toUpperCase() + textIpt.value.slice(1).toLowerCase();
-        const k = name.charCodeAt(0)-65;
-        const list = document.querySelector('ol').children;
-        if (!names.hasOwnProperty(k))names[k] = [];
-        names[k].push(name);
-        list[k].textContent = names[k].join(", ");
-    } 
+    const list = document.getElementsByTagName('li');
+    const input = document.querySelector('input[type=text]');
+    const btn = document.querySelector('button[type=button]');
+ 
+    btn.addEventListener('click', x => {
+        const index = input.value[0].toUpperCase().charCodeAt(0) - 65;
+        const newItem = input.value[0].toUpperCase() + input.value.substring(1).toLowerCase();
+ 
+        const output =
+            list[index].textContent
+                .split(', ')
+                .filter(x=>x);
+        output.push(newItem);
+        list[index].textContent = output.join(', ');
+        input.value = '';
+    });
 }

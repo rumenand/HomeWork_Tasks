@@ -7,9 +7,7 @@ function solve(a,b){
         }
     }
     function adjSort(x,b){
-        if (isNaN(x[0][b])){
-            return  x.sort((y,z)=>y[b].localeCompare(z[b]));
-        }
+        if (isNaN(x[0][b])) return  x.sort((y,z)=>y[b].localeCompare(z[b]));        
         return x.sort((y,z) => y[b]-z[b]);
     }
     return adjSort(a.map(x=>new Ticket(...x.split('|'))),b);   
