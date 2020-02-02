@@ -1,13 +1,12 @@
 function solve() {
+  const txtAreas = document.querySelectorAll('textarea');
+  const tBody = document.querySelector("tbody");
   const handlerMap = {
     Generate : addFrn,
     Buy : chOut
   };
 [...document.querySelectorAll('button')]
-.map(x=>x.addEventListener('click',(e) => handlerMap[e.target.innerHTML]()));
-
-const txtAreas = document.querySelectorAll('textarea');
-const tBody = document.querySelector("tbody");
+.map(x=>x.addEventListener('click',handlerMap[x.innerHTML]));
 
 function addFrn(){  
   let obj = JSON.parse(txtAreas[0].value);
@@ -23,8 +22,8 @@ function addFrn(){
  rows.map(x=>tBody.appendChild(x));
 }
 function crElem(x,y){
-  let el = document.createElement("td");
-  let p = document.createElement(y);
+  const el = document.createElement("td");
+  const p = document.createElement(y);
   if (y === 'img') p.src = x;
   else if (y==='input')  p.type= "checkbox";
   else p.textContent = x;
