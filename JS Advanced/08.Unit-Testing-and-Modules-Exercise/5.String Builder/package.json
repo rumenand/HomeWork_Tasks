@@ -1,0 +1,15 @@
+{
+  "name": "5.string-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "5.String Builder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1"
+  }
+}

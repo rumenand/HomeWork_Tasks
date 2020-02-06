@@ -1,0 +1,15 @@
+{
+  "name": "4.math-enforcer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "4.Math Enforcer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1"
+  }
+}

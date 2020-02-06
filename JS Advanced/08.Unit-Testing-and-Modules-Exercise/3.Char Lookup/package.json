@@ -1,0 +1,23 @@
+{
+  "name": "3.char-lookup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "3.Char Lookup.js",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "find-up": "^3.0.0",
+    "locate-path": "^3.0.0",
+    "mocha": "^7.0.1",
+    "p-limit": "^2.2.2",
+    "p-locate": "^3.0.0",
+    "path-exists": "^3.0.0",
+    "path-is-absolute": "^1.0.1",
+    "picomatch": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
