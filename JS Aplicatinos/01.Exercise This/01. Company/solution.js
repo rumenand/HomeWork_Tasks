@@ -28,7 +28,7 @@ class Company{
       let res = ''
       const bestDep = this.departments.sort((a,b) =>  this.avSalary(b) - this.avSalary(a))[0];
       res +=`Best Department is: ${bestDep.name}\n`;
-      res +=`Average salary: ${this.avSalary(bestDep)}\n`;
+      res +=`Average salary: ${this.avSalary(bestDep).toFixed(2)}\n`;
 
       const sortEmp = bestDep.sort((a,b) => {
          let r = b.salary - a.salary;
@@ -37,7 +37,7 @@ class Company{
       })
       sortEmp.map(x=>res +=`${x.username} ${x.salary} ${x.position}\n`);
 
-      return res;      
+      return res.trim();      
    } 
    avSalary(x){
       return x.reduce((a,b) => {
