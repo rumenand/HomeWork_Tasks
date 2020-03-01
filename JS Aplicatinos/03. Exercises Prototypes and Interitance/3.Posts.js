@@ -24,14 +24,12 @@ function solve(){
             let str = super.toString();
             str += `Rating: ${this._likes - this._dislikes}`; 
             str += (this._comments.length>0) 
-             ?this._comments.reduce((a,b)=>{
+            ?this._comments.reduce((a,b)=>{
                 a += `\n * ${b}`;
                 return a; 
             },'\nComments:')
             :'';
-            return str;
-            
-           
+            return str;    
         }
     }
     class BlogPost extends Post {
