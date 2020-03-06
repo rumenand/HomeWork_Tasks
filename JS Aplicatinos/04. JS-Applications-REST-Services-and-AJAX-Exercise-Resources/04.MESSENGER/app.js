@@ -6,7 +6,7 @@ function refreshHandler(){
     fetch(`https://rest-messanger.firebaseio.com/messanger.json`)
     .then(res => res.json())
     .then(printData)
-    //.catch(errHandler);
+    .catch(errHandler);
 }
 function printData(data){
     const printCtn = document.querySelector('#messages');
@@ -14,7 +14,7 @@ function printData(data){
     const txt = (Object.keys(data)).map(x=>
          `${data[x].author}: ${data[x].content}`);
     printCtn.value = txt.join('\n');
-
+    printCtn.scrollTop = printCtn.scrollHeight;
 }
 function addHandler(){
   const authorCtn = document.querySelector('#author');
@@ -31,6 +31,10 @@ function addHandler(){
       authorCtn.value = '';
       messageCtn.value = '';
     })
+    .then(refreshHandler)
+}
+function errHandler(err){
+ document.querySelector('#messages').value = err;
 }
 
 attachEvents();
