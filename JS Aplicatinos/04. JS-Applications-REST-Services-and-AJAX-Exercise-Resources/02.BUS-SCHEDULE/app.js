@@ -1,30 +1,33 @@
 function solve() {
-    let cStop = '';
-    let nStop = '';
-    const txtCtn = document.querySelector('.info');
-    const depBtn = document.querySelector('#depart');
-    const arvBtn = document.querySelector('#arrive');
+    const html = {
+        txtField : () => document.querySelector('.info'),
+        depBtn : ()=> document.getElementById('depart'),
+        arvBtn : ()=> document.getElementById('arrive')
+    }
+    let cStop;
+    let nStop;
     function depart() {
-        if (cStop === '') cStop = 'depot';
-        fetch(`https://judgetests.firebaseio.com/schedule/${cStop}.json `)
+        fetch(getUrl(cStop))
         .then(res => res.json())
         .then(handler)
-    //.catch(errHandler);
-        
+        .catch((err) => {html.txtField().textContent = err}); 
        
+    }
+    function getUrl(x='depot'){
+        return `https://judgetests.firebaseio.com/schedule/${x}.json`;
     }
     function handler(data){
         cStop = data.name;
         nStop = data.next;
-        txtCtn.textContent = `Next stop ${cStop}`;
-        depBtn.disabled = true;
-        arvBtn.disabled = false;
+        html.txtField().textContent = `Next stop ${cStop}`;
+        html.depBtn().disabled = true;
+        html.arvBtn().disabled = false;
     }
 
     function arrive() {
-        txtCtn.textContent = `Arriving at ${cStop}`;
-        depBtn.disabled = false;
-        arvBtn.disabled = true;
+        html.txtField().textContent = `Arriving at ${cStop}`;
+        html.depBtn().disabled = false;
+        html.arvBtn().disabled = true;
         cStop = nStop;
     }
 
@@ -34,4 +37,4 @@ function solve() {
     };
 }
 
-let result = new solve();
+let result = solve();

@@ -1,17 +1,21 @@
 function attachEvents() {
-    document.querySelector('#btnLoad').addEventListener('click',getData);    
-    document.querySelector('#btnCreate').addEventListener('click',createHandler);
-
+    html.btnLoad().addEventListener('click',getData);    
+    html.btnCreate().addEventListener('click',createHandler);    
 }
-function getData(){    
-        fetch(`https://phonebook-nakov.firebaseio.com/phonebook.json`)
-        .then(res => res.json())
-        .then(printData)
-        .catch(errHandler);
+function getUrl(x){
+    return `https://phonebook-nakov.firebaseio.com/${x}.json`
 }
-function printData(data){
-    const phBook = document.querySelector('#phonebook');
-    phBook.innerHTML = '';   
+function fetchData(url,headers,callbacks){
+    fetch(getUrl(url),headers)
+    .then(res=>res.json())
+    .then((data) => callbacks.forEach(x=>x(data)))
+    .catch((e) => html.phBookList().innerHTML = e);
+}
+function getData(){
+    fetchData('phonebook',undefined,[printData])        
+}
+function printData(data){    
+    let frag = document.createElement('fragment');
     (Object.keys(data)).forEach(x=>{
         const li = document.createElement('li');
         li.textContent = `${data[x].person}: ${data[x].phone}`;
@@ -19,38 +23,32 @@ function printData(data){
         delBtn.textContent = 'Delete';
         delBtn.addEventListener('click',delHandler.bind({key:x}));
         li.appendChild(delBtn);
-        phBook.appendChild(li);
-    });    
+        frag.appendChild(li);
+    });
+    html.phBookList().innerHTML = '';
+    html.phBookList().appendChild(frag); 
 }
-
-function delHandler(){
-    const key = this.key;
-    const headers = {
-        method : "DELETE"
+function delHandler(){   
+    fetchData(`phonebook/${this.key}`,{method: "DELETE"},[getData]);
+}
+function createHandler(){    
+    const data = {
+        person: html.personCtn().value,
+        phone: html.phoneCtn().value
     };
-    fetch(`https://phonebook-nakov.firebaseio.com/phonebook/${key}.json`,headers)
-    .then(getData);
+    fetchData('phonebook',
+     {method: 'post',body: JSON.stringify(data)},
+     [getData,clearFields]);     
 }
-
-function createHandler(){
-    const personCtn = document.querySelector('#person');
-    const phoneCtn = document.querySelector('#phone');
-    const person = personCtn.value;
-    const phone = phoneCtn.value;
-    const data = {person,phone};
-    fetch(`https://phonebook-nakov.firebaseio.com/phonebook.json`
-     ,{
-        method: 'post',
-        body: JSON.stringify(data),
-        })
-    .then(getData)
-    .then(() => {
-        personCtn.value = '';
-        phoneCtn.value = '';
-    })
+function clearFields(){
+    html.personCtn().value = '';
+    html.phoneCtn().value = '';  
 }
-function errHandler() {
-    document.querySelector('#phonebook').innerHTML = "There are no elements";
+const html = {
+    phBookList: () => document.getElementById('phonebook'),
+    btnLoad: () => document.getElementById('btnLoad'),    
+    btnCreate: () =>document.getElementById('btnCreate'),
+    personCtn: ()=> document.getElementById('person'),
+    phoneCtn: ()=> document.getElementById('phone')
 }
-
 attachEvents();
