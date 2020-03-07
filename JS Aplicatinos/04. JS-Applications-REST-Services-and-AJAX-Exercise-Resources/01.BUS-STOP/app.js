@@ -1,26 +1,27 @@
 function getInfo() {
-const bId = document.querySelector('#stopId').value;
-const stopId = document.querySelector('#stopName');
-const busesCont = document.querySelector('#buses');
-
-stopId.textContent = '';
-busesCont.innerHTML = '';
-
-fetch(`https://judgetests.firebaseio.com/businfo/${bId}.json`)
+const html = {
+        stopId: ()=> document.getElementById('stopId'),
+        stopName: ()=> document.getElementById('stopName'),
+        bussesCont: ()=> document.getElementById('buses')
+    }
+html.stopName().textContent = '';
+html.bussesCont().innerHTML = '';
+let url = `https://judgetests.firebaseio.com/businfo/${html.stopId().value}.json`;
+fetch(url)
 .then(res => res.json())
 .then(handler)
 .catch(errHandler);
 
 function handler(data){
     const {name, buses} = data;
-    stopId.textContent = name;
+    html.stopName().textContent = name;
     (Object.keys(buses)).forEach(x=>{
         const li = document.createElement('li');
         li.textContent = `Bus ${x} arrives in ${buses[x]} minutes`;
-        busesCont.appendChild(li);
+        html.bussesCont().appendChild(li);
     });
 }
 function errHandler(err){
-    stopId.textContent = "Error";
+    html.stopName().textContent = err;
 }
 }
