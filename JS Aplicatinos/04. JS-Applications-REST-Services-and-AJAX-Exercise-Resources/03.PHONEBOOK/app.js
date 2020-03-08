@@ -14,8 +14,8 @@ function fetchData(url,headers,callbacks){
 function getData(){
     fetchData('phonebook',undefined,[printData])        
 }
-function printData(data){    
-    let frag = document.createElement('fragment');
+function printData(data){   
+    html.phBookList().innerHTML = ''; 
     (Object.keys(data)).forEach(x=>{
         const li = document.createElement('li');
         li.textContent = `${data[x].person}: ${data[x].phone}`;
@@ -23,10 +23,8 @@ function printData(data){
         delBtn.textContent = 'Delete';
         delBtn.addEventListener('click',delHandler.bind({key:x}));
         li.appendChild(delBtn);
-        frag.appendChild(li);
-    });
-    html.phBookList().innerHTML = '';
-    html.phBookList().appendChild(frag); 
+        html.phBookList().appendChild(li);
+    });   
 }
 function delHandler(){   
     fetchData(`phonebook/${this.key}`,{method: "DELETE"},[getData]);

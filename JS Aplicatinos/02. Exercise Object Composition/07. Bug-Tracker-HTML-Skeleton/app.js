@@ -29,7 +29,7 @@ function solve () {
         if (selector !== ''){
         const cont = document.querySelector(selector);
         cont.innerHTML = '';
-        data.map( x=>{
+        data.forEach( x=>{
         const wrapDiv = getEl('div',[{k:'id',v:`report_${x.ID}`},{k:'class',v:'report'}]);
         const bodyDiv = getEl('div',[{k:'class',v:'body'}]);
         bodyDiv.appendChild(getEl('p',undefined,x.description));       
@@ -44,23 +44,9 @@ function solve () {
     }
     function getEl(a,b,c){
         let el = document.createElement(a);
-        if (b !== undefined)
-        b.map(x=>el.setAttribute(x.k, x.v));
+        if (b !== undefined) b.forEach(x=>el.setAttribute(x.k, x.v));
         if (c !== undefined) el.textContent = c;
         return el;
     }    
     return{ report,setStatus,remove,sort,output}
 }
-
-//document.body.innerHTML =`<div id="content"></div>`;
-
-let tracker = solve();
-
-tracker.output('#content');
-tracker.report('guy', 'report content', true, 5);
-tracker.report('second guy', 'report content 2', true, 3);
-tracker.report('abv', 'report content three', true, 4);
-
-tracker.sort('author');
-tracker.sort('severity');
-//tracker.sort('ID');
