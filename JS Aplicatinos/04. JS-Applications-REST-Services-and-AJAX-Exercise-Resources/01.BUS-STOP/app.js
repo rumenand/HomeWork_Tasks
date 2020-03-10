@@ -22,6 +22,6 @@ function handler(data){
     });
 }
 function errHandler(err){
-    html.stopName().textContent = err;
+    html.stopName().textContent = 'Error';
 }
 }
