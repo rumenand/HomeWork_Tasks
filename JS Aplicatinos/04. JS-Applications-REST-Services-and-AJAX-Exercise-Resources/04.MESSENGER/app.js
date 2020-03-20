@@ -6,7 +6,7 @@ function fetchData(_,headers,callbacks){
   fetch(getUrl(),headers)
   .then(res=>res.json())
   .then((data) => callbacks.forEach(x=>x(data)))
-  .catch((e) => html.msgField.value = e);
+  .catch((e) => html.msgField().value = e);
 }
 const getUrl = () => 'https://rest-messanger.firebaseio.com/messanger.json';
 const refreshHandler = () => fetchData.call(undefined,'',undefined,[printData]);

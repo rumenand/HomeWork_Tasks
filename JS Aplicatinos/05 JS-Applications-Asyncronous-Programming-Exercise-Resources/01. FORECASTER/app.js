@@ -17,9 +17,8 @@ const getCode = (data) => data.filter(x=>x.name === html.loc().value)[0].code;
 const getDegrStr = (x) =>`${x.low}${symbolMap['Degrees']}/${x.high}${symbolMap['Degrees']}`;
 const getSymbol = (x) => symbolMap[x];
 const displFr = () => html.mainFr().style.display = 'block';
-const initFr = () => html.mainFr().innerHTML = `
-	<div id="current"></div>
-        <div id="upcoming"></div>`;
+const initFr = () => html.mainFr().innerHTML = `div id="current"></div>
+												<div id="upcoming"></div>`;
 const getLocations = () => fetchData('locations',[getOneDay,getThreeDays,initFr,displFr]);
 const getOneDay = (data) => fetchData(`forecast/today/${getCode(data)}`,[printOneDay]);
 const getThreeDays = (data) =>fetchData(`forecast/upcoming/${getCode(data)}`,[printThreeDays]);
