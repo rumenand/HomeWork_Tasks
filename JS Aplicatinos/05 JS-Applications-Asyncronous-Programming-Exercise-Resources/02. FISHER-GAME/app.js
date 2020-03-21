@@ -36,7 +36,7 @@ function printData(data){
     const updBtn = getEl('button',[{k:'class',v:'update'}],'Update');
     updBtn.addEventListener('click',updHandler.bind({id}));   
     const delBtn = getEl('button',[{k:'class',v:'update'}],'Delete');
-    delBtn.addEventListener('click',delHandler.bind({id,})); 
+    delBtn.addEventListener('click',delHandler.bind({id})); 
     div.appendChild(updBtn);
     div.appendChild(delBtn);
     html.cathesCtn().appendChild(div);
