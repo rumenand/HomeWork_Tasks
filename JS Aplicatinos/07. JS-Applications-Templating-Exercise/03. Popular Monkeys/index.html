@@ -3,8 +3,9 @@
   <meta charset="UTF-8">
   <title>Popular Monkeys</title>
   <script src="../handlebars.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="./style.css"/>
   
+  <link rel="stylesheet" type="text/css" href="./style.css"/> 
+  <script type="module" src="./monkeysTemplate.js"></script> 
 </head>
 <body>
   <section>
@@ -13,10 +14,10 @@
     </div>
   </section>
 </body>
-<script type="text/x-handlebars-template" id="monkey-template">
+<script type= "text/x-handlebars-template" id="monkey-template">
   {{#each monkeys}}
-  <div class="monkey">
-    <h2>Chim Chim</h2>
+  <div class = "monkey">
+    <h2>{{this.name}}</h2>
     <img src={{this.image}}>
     <button>Info</button>
     <p style="display: none" id={{this.id}}>
@@ -25,6 +26,4 @@
   </div>
   {{/each}}
 </script>
-<script src="./monkeys.js"></script>
-<script src="./monkeysTemplate.js"></script>
 </html>

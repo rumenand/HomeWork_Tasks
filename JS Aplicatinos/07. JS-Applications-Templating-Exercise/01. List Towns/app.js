@@ -7,7 +7,7 @@ const html = {
 
 async function printTowns(e){
     e.preventDefault();
-    const hbs = await fetch('./template.hbs').then(x=>x.text());
+    const hbs = await fetch('./template.hbs').then(x=>x.text()).catch((e) => alert(e));
     const template = Handlebars.compile(hbs);
     const obj = html.input().value.split(', ')
               .filter(x=>x!=='');
