@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/team.css">
+    <link rel="stylesheet" type="text/css" href="css/details.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   
+    <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="../node_modules/sammy/lib/min/sammy-0.7.6.min.js"></script>
+    <script src="../node_modules/sammy/lib/min/plugins/sammy.handlebars-0.7.6.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script>      
+      var firebaseConfig = {
+        apiKey: "AIzaSyDkgC-LGMANcDV1xAV8KipZAaewAd5cZoQ",
+        authDomain: "routinghomework-5be97.firebaseapp.com",
+        databaseURL: "https://routinghomework-5be97.firebaseio.com",
+        projectId: "routinghomework-5be97",
+        storageBucket: "routinghomework-5be97.appspot.com",
+        messagingSenderId: "891110070846",
+        appId: "1:891110070846:web:7cf971d49916db619e0f6f",
+        measurementId: "G-CLJC6B3FTM"
+      };
+      firebase.initializeApp(firebaseConfig);
+     // firebase.analytics();
+    </script>
+    <script type="module" src="scripts/app.js"></script>
+    <title>Team Managers App</title>
+  </head>
+  <body>
+    <div id="infoBox" class="notification" disabled></div>
+    <div id="errorBox" class="notification" disabled></div>
+    <div id="main">
+
+    </div>
+  </body>
+</html>
