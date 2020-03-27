@@ -15,9 +15,18 @@ async function aboutViewHandler(){
 async function loginViewHandler(){
     this.partials = {
         header : await this.load('./templates/common/header.hbs'),
-        footer : await this.load('./templates/common/footer.hbs')
+        footer : await this.load('./templates/common/footer.hbs'),
+        loginForm: await this.load('./templates/login/loginForm.hbs')
         }
-        this.partial('./templates/login/login.hbs');
+        this.partial('./templates/login/loginPage.hbs');
+}
+async function registerViewHandler(){
+    this.partials = {
+        header : await this.load('./templates/common/header.hbs'),
+        footer : await this.load('./templates/common/footer.hbs'),
+        registerForm: await this.load('./templates/register/registerForm.hbs')
+        }
+        this.partial('./templates/register/registerPage.hbs');
 }
 
 var app = Sammy('#main', function() {
@@ -28,6 +37,7 @@ var app = Sammy('#main', function() {
     this.get('#/home',homeViewHandler);
     this.get('#/about',aboutViewHandler);
     this.get('#/login',loginViewHandler);
+    this.get('#/register',registerViewHandler);
   });
   
 (()=> {
