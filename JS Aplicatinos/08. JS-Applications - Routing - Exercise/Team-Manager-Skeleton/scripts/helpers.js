@@ -30,7 +30,7 @@ export function curUserTeam(data){
     let userTeam = '';
     data.forEach(x=>{
         const res = x.members.split(', ').filter(y=>y===tgUser)[0];
-        if (res !== undefined) userTeam = x.name;
+        if (res !== undefined) userTeam = x;
     })
     return userTeam;
 }
@@ -39,4 +39,13 @@ export function getIndexOfTeam(data,searchId){
         if (data[i]._id === searchId) return i;
     }
     return -1;
+}
+
+export async function applyCommon(){
+    this.partials = {
+        header : await this.load('./templates/common/header.hbs'),
+        footer : await this.load('./templates/common/footer.hbs')
+        }
+    this.username = getCurUser();
+    this.loggedIn = !!sessionStorage.getItem('token');
 }
