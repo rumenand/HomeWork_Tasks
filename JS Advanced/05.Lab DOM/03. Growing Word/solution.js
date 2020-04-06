@@ -1,18 +1,28 @@
 function growingWord() {
-  var x = document.getElementById("exercise"); 
-  if (!x.querySelector('counter')){
-    let newC =  document.createElement('counter');
-    newC.setAttribute('c',0);
-    document.getElementById('exercise').appendChild(newC);
-  }  
-  let counter = x.querySelector('counter');
-  let curCount = Number(counter.getAttribute('c'));
-  
-  x.querySelector("p").style.fontSize = `${2*curCount+2}px`;
-  let colors = ['#5B88BD','#8FF897','#A40014'];
-  let curCol = (curCount+2)%3;
-  x.querySelector("p").style.color = colors[curCol];
-  
-  curCount++;
-  counter.setAttribute('c', curCount);
+    const word = document.querySelector("#exercise > p");
+    if (word === null) {
+        throw new Error("No such word");
+    }
+    let fontSize = window
+        .getComputedStyle(word)
+        .fontSize
+        .replace("px", "");
+    if (fontSize === '0'){
+        document.count = state();
+    }
+    const colorMap = ["blue", "green", "red"];   
+    function state() {
+        let e = 0;
+        return function (command) {
+            if (command === 'incr') e++;
+            if (command === 'zero') e=0;
+            return e;
+        }
+    }
+    if (document.count() >= colorMap.length) {
+        document.count('zero');
+    } 
+    word.style.color = colorMap[document.count()];
+    document.count('incr'); 
+    word.style.fontSize = (fontSize === "0" ? "4" : Number(fontSize) * 2) + "px";
 }
