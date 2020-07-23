@@ -42,7 +42,6 @@
             Order order = this.mapper.Map<Order>(model);
             OrderItem orderItem = this.mapper.Map<OrderItem>(model);
             orderItem.Order = order;
-            orderItem.OrderId = order.Id;
             this.context.Orders.Add(order);
             this.context.OrderItems.Add(orderItem);
             this.context.SaveChanges();

@@ -11,7 +11,6 @@ namespace FastFood.Core.ViewModels.Orders
         [Required]
         public int EmployeeId { get; set; }
         [Required]
-        [Range(1,1000)]
         public int Quantity { get; set; }
     }
 }
