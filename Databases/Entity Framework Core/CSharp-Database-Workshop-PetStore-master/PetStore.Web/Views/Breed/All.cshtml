@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PetStore.ViewModels.Breed.BreedViewModel>
+
+@{
+    ViewData["Title"] = "All";
+}
+
+<div class="text-center">
+    <h1>All</h1>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <div class="text-right jumbotron-fluid">
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure about deleting the @item.Name?')">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-success" asp-action="Create">Create New</a>
