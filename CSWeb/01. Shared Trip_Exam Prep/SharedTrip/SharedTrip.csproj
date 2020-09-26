@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SharedTrip.Data\SharedTrip.Data.csproj" />
+    <ProjectReference Include="..\SharedTrip.Services\SharedTrip.Services.csproj" />
     <ProjectReference Include="..\SIS.MvcFramework\SIS.MvcFramework.csproj" />
   </ItemGroup>
   
