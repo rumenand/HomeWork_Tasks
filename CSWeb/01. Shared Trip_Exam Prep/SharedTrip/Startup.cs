@@ -5,8 +5,8 @@
     using SharedTrip.Services;
     using SharedTrip.Data;
     using SIS.HTTP;
-    using SIS.HTTP.Logging;
     using SIS.MvcFramework;
+ 
 
     public class Startup : IMvcApplication
     {
@@ -19,6 +19,7 @@
         public void ConfigureServices(IServiceCollection serviceCollection)
         {
             serviceCollection.Add<IUsersService, UserService>();
+            serviceCollection.Add<ITripService, TripService>();
         }
     }
 }

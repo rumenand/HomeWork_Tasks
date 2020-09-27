@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIS.MvcFramework.Tests", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedTrip", "SharedTrip\SharedTrip.csproj", "{52CE1D6C-A958-49D9-94A9-A9688E9C7E82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedTrip.Services", "SharedTrip.Services\SharedTrip.Services.csproj", "{23EF4381-68BF-4210-AF53-ED3B87FC9049}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedTrip.Services", "SharedTrip.Services\SharedTrip.Services.csproj", "{23EF4381-68BF-4210-AF53-ED3B87FC9049}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedTrip.Data", "SharedTrip.Data\SharedTrip.Data.csproj", "{1564263D-D636-4DD9-8047-BCA8E7F02A96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedTrip.Data", "SharedTrip.Data\SharedTrip.Data.csproj", "{1564263D-D636-4DD9-8047-BCA8E7F02A96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedTrip.Models", "SharedTrip.Models\SharedTrip.Models.csproj", "{92F1AD39-3E78-4073-9D43-52687D7516E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{1564263D-D636-4DD9-8047-BCA8E7F02A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1564263D-D636-4DD9-8047-BCA8E7F02A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1564263D-D636-4DD9-8047-BCA8E7F02A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F1AD39-3E78-4073-9D43-52687D7516E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F1AD39-3E78-4073-9D43-52687D7516E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F1AD39-3E78-4073-9D43-52687D7516E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F1AD39-3E78-4073-9D43-52687D7516E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

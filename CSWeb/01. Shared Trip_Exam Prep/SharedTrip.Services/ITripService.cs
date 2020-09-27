@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SharedTrip.Data.Models;
+using SharedTrip.Models.Common.Trips;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,9 +8,9 @@ namespace SharedTrip.Services
 {
     public interface ITripService
     {
-        void Create(string name, string cover);
+        void Add(TripAddInputModel inputModel);
 
-        IEnumerable<object> GetAll();
+        IEnumerable<Trip> GetAll();
 
         object GetDetails(string id);
     }

@@ -1,5 +1,5 @@
 ﻿using SIS.MvcFramework;
-using System;
+using SharedTrip.Models;
 using System.Threading.Tasks;
 
 namespace SharedTrip
