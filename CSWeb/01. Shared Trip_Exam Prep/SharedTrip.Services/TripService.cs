@@ -31,15 +31,31 @@ namespace SharedTrip.Services
             this.dbContext.Trips.Add(trip);
             this.dbContext.SaveChanges();
         }
+       
 
         public IEnumerable<Trip> GetAll()
         {
-            return this.dbContext.Trips;
+            return this.dbContext.Trips.ToList();
         }
 
-        public object GetDetails(string id)
+        public Trip GetDetails(string id)
         {
-            throw new NotImplementedException();
+            return dbContext.Trips.Where(x => x.Id == id).FirstOrDefault();
+        }
+
+        public bool TryAddUserToTrip (string tripId, string userId)
+        {
+            var targetTrip = this.GetDetails(tripId);
+            var takenSeats = dbContext.UserTrips.Where(x => x.TripId == targetTrip.Id).Count();
+            if (takenSeats >= targetTrip.Seats) return false;
+            var newUserTrip = new UserTrip
+            {
+                Trip = targetTrip,
+                UserId = userId
+            };
+            dbContext.UserTrips.Add(newUserTrip);
+            dbContext.SaveChanges();
+            return true;
         }
     }
 }

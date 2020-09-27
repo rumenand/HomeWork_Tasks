@@ -1,8 +1,6 @@
 ﻿using SharedTrip.Data.Models;
 using SharedTrip.Models.Common.Trips;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace SharedTrip.Services
 {
@@ -12,6 +10,7 @@ namespace SharedTrip.Services
 
         IEnumerable<Trip> GetAll();
 
-        object GetDetails(string id);
+        Trip GetDetails(string id);
+        bool TryAddUserToTrip(string tripId, string userId);
     }
 }

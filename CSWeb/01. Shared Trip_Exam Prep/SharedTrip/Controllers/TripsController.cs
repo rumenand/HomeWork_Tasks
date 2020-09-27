@@ -1,10 +1,8 @@
-﻿
-using SharedTrip.Models;
-using SharedTrip.Models.Common.Trips;
+﻿using SharedTrip.Models.Common.Trips;
+using SharedTrip.ViewModels.Trips;
 using SharedTrip.Services;
 using SIS.HTTP;
 using SIS.MvcFramework;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace SharedTrip.Controllers
@@ -23,11 +21,9 @@ namespace SharedTrip.Controllers
                 return this.Redirect("/Users/Login");
             }
 
-            var allTrips = this.tripService.GetAll();
-
             var viewModel = new AllTripsViewModel
             {
-                Trips = allTrips.Select(x=>new TripViewModel
+                Trips = this.tripService.GetAll().Select(x=> new TripViewModel
                 {
                     Id = x.Id,
                     StartPoint = x.StartPoint,
@@ -77,6 +73,39 @@ namespace SharedTrip.Controllers
             this.tripService.Add(inputModel);
 
             return this.Redirect($"/Trips/All");
+        }
+        public HttpResponse Details(string tripId)
+        {
+            if (!this.IsUserLoggedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
+            var targetTrip = this.tripService.GetDetails(tripId);
+            var viewModel = new TripDetailsViewModel
+            {
+                Id = targetTrip.Id,
+                ImagePath = targetTrip.ImagePath,
+                StartPoint = targetTrip.StartPoint,
+                EndPoint = targetTrip.EndPoint,
+                DepartureTime = targetTrip.DepartureTime.ToString("yyyy-MM-dd HH:mm").Replace(" ","T"),
+                Description = targetTrip.Description,
+                Seats = targetTrip.Seats
+            };
+            return this.View(viewModel);
+        }
+        public HttpResponse AddUserToTrip(string tripId)
+        {
+            if (!this.IsUserLoggedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+            if(tripService.TryAddUserToTrip(tripId,this.User))
+            {
+
+            }
+           
+            return this.Redirect("/Trips/All");
         }
     }
 }

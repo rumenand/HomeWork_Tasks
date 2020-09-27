@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace SharedTrip.Models
+namespace SharedTrip.ViewModels.Trips
 {
     public class AllTripsViewModel
     {
