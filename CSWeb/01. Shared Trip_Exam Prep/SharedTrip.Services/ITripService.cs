@@ -11,6 +11,7 @@ namespace SharedTrip.Services
         IEnumerable<Trip> GetAll();
 
         Trip GetDetails(string id);
-        bool TryAddUserToTrip(string tripId, string userId);
+        string TryAddUserToTrip(string tripId, string userId);
+       short GetTripFreePlaces(Trip trip);
     }
 }

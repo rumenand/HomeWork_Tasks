@@ -20,7 +20,6 @@ namespace SharedTrip.Controllers
             {
                 return this.Redirect("/Users/Login");
             }
-
             var viewModel = new AllTripsViewModel
             {
                 Trips = this.tripService.GetAll().Select(x=> new TripViewModel
@@ -31,8 +30,7 @@ namespace SharedTrip.Controllers
                     DepartureTime = x.DepartureTime,
                     Seats = x.Seats
                 }).ToList()
-            };
-                   
+            };                   
             return this.View(viewModel);
         }
 
@@ -42,7 +40,6 @@ namespace SharedTrip.Controllers
             {
                 return this.Redirect("/Users/Login");
             }
-
             return this.View();
         }
 
@@ -56,7 +53,8 @@ namespace SharedTrip.Controllers
 
             if (string.IsNullOrEmpty(inputModel.StartPoint) || string.IsNullOrEmpty(inputModel.EndPoint))
             {
-                return this.View();
+                return this.Error("Are you crazy?");
+               // return this.View();
             }
 
             if (inputModel.Seats < 2 || inputModel.Seats > 6)
@@ -68,10 +66,7 @@ namespace SharedTrip.Controllers
             {
                 return this.View();
             }
-
-
             this.tripService.Add(inputModel);
-
             return this.Redirect($"/Trips/All");
         }
         public HttpResponse Details(string tripId)
@@ -90,7 +85,7 @@ namespace SharedTrip.Controllers
                 EndPoint = targetTrip.EndPoint,
                 DepartureTime = targetTrip.DepartureTime.ToString("yyyy-MM-dd HH:mm").Replace(" ","T"),
                 Description = targetTrip.Description,
-                Seats = targetTrip.Seats
+                Seats = tripService.GetTripFreePlaces(targetTrip)
             };
             return this.View(viewModel);
         }
@@ -100,12 +95,18 @@ namespace SharedTrip.Controllers
             {
                 return this.Redirect("/Users/Login");
             }
-            if(tripService.TryAddUserToTrip(tripId,this.User))
-            {
-
-            }
+             var result = tripService.TryAddUserToTrip(tripId,this.User);           
            
-            return this.Redirect("/Trips/All");
+            return this.Redirect("/Trips/JoinResult/"+result);
+        }
+        [HttpGet(url: "/Trips/JoinResult/AlreadyIn")]
+        public HttpResponse AlreadyIn()
+        {
+            if (!this.IsUserLoggedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+            return this.View();
         }
     }
 }

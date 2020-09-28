@@ -43,11 +43,17 @@ namespace SharedTrip.Services
             return dbContext.Trips.Where(x => x.Id == id).FirstOrDefault();
         }
 
-        public bool TryAddUserToTrip (string tripId, string userId)
+        public string TryAddUserToTrip (string tripId, string userId)
         {
             var targetTrip = this.GetDetails(tripId);
-            var takenSeats = dbContext.UserTrips.Where(x => x.TripId == targetTrip.Id).Count();
-            if (takenSeats >= targetTrip.Seats) return false;
+            if (checkUserIsJoinedOnTrip(targetTrip,userId))
+            {
+                return "AlreadyIn";
+            }
+            if (this.GetTripFreePlaces(targetTrip) == 0)
+            {
+                return "Occupied";
+            }
             var newUserTrip = new UserTrip
             {
                 Trip = targetTrip,
@@ -55,7 +61,18 @@ namespace SharedTrip.Services
             };
             dbContext.UserTrips.Add(newUserTrip);
             dbContext.SaveChanges();
-            return true;
+            return "Success";
         }
+
+        private bool checkUserIsJoinedOnTrip(Trip targetTrip, string userId)
+        {
+            return dbContext.UserTrips.Any(x => x.Trip == targetTrip && x.UserId == userId);
+        }
+
+        public short GetTripFreePlaces(Trip trip)
+        {
+            return (short)(trip.Seats - dbContext.UserTrips.Where(x => x.TripId == trip.Id).Count());
+        }
+        
     }
 }
