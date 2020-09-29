@@ -53,8 +53,7 @@ namespace SharedTrip.Controllers
 
             if (string.IsNullOrEmpty(inputModel.StartPoint) || string.IsNullOrEmpty(inputModel.EndPoint))
             {
-                return this.Error("Are you crazy?");
-               // return this.View();
+                return this.Error("Start and End point are mandatory!");
             }
 
             if (inputModel.Seats < 2 || inputModel.Seats > 6)
@@ -64,8 +63,9 @@ namespace SharedTrip.Controllers
 
             if (string.IsNullOrEmpty(inputModel.Description) || inputModel.Description.Length > 80)
             {
-                return this.View();
+                return this.Error("Description shall be between 1 and 80 letters!");
             }
+
             this.tripService.Add(inputModel);
             return this.Redirect($"/Trips/All");
         }

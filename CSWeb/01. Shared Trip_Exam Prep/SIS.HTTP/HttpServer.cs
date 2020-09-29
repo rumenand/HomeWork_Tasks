@@ -105,7 +105,7 @@
                 {
                     response.Cookies.Add(
                         new ResponseCookie(HttpConstants.SessionIdCookieName, newSessionId)
-                            { HttpOnly = true, MaxAge = 30*3600, SameSite = SameSiteType.Strict });
+                            { HttpOnly = true, MaxAge = 30*3600, SameSite = SameSiteType.None });
                 }
 
                 byte[] responseBytes = Encoding.UTF8.GetBytes(response.ToString());
